@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import AboutMe from "../components/AboutMe";
 
+import PlanetSystem from "../components/PlanetSystem";
+
 const Home = () => {
   return (
     <motion.div
@@ -28,16 +30,23 @@ const Home = () => {
 
       <section
         id="about"
-        className="min-h-screen flex items-center justify-center"
+        className="min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-12"
       >
-        <AboutMe />
+        <div className="w-full md:w-1/2">
+          <AboutMe />
+        </div>
+        <div className="w-full md:w-1/2">
+          <PlanetSystem />
+        </div>
       </section>
+
       <section
         id="projects"
         className="min-h-screen flex items-center justify-center"
       >
-        Projects
+        Projects{" "}
       </section>
+
       <section
         id="skills"
         className="min-h-screen flex items-center justify-center"

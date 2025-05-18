@@ -1,7 +1,55 @@
 {
   "name": "Luis Soto Torres",
-  "title": "Ingeniero Informático",
-  "description": "Apasionado por el desarrollo web y el diseño de experiencias digitales. Me encanta explorar nuevas tecnologías y construir interfaces limpias, accesibles y con estilo.",
-  "skills": ["React", "JavaScript", "Tailwind CSS", "Node.js", "Git"],
-  "hobbies": ["Astronomía", "Videojuegos", "Tecnología", "Café ☕"]
+  "title": "Ingeniero Informático y Desarrollador C++",
+  "description": "Desarrollador con experiencia en C++, Java, inteligencia artificial y desarrollo web. Apasionado por la tecnología espacial, interfaces interactivas y el aprendizaje continuo.",
+  "skills": [
+    "C++",
+    "Java",
+    "JavaScript",
+    "Python",
+    "HTML",
+    "CSS",
+    "Kotlin",
+    "React",
+    "Tailwind CSS",
+    "Git",
+    "Linux",
+    "Agile",
+    "Scrum",
+    "AI",
+    "Node-RED",
+    "Power BI",
+    "OpenGL",
+    "Firebase"
+  ],
+  "hobbies": [
+    "Astronomía",
+    "Videojuegos",
+    "Tecnología",
+    "Café ☕",
+    "Animación 3D",
+    "Desarrollo de Apps"
+  ],
+  "languages": [
+    { "name": "Español", "level": "Nativo" },
+    { "name": "Inglés", "level": "Avanzado (FCE)" },
+    { "name": "Francés", "level": "Básico (B2)" },
+    { "name": "Finés", "level": "Básico (A1)" }
+  ],
+  "experience": [
+    {
+      "role": "C++ Developer",
+      "company": "Amadeus",
+      "location": "Nice, Francia",
+      "period": "Sep 2023 – Actualidad",
+      "description": "Desarrollo de servicios auxiliares para aerolíneas como Southwest Airlines, Air France y más usando C++ en entornos Agile."
+    },
+    {
+      "role": "Junior Developer",
+      "company": "NTT Data",
+      "location": "Granada, España (Remoto)",
+      "period": "Mar 2023 – Sep 2023",
+      "description": "Proyecto interno para seguimiento horario con Power BI, JSON, Java y Node-RED."
+    }
+  ]
 }
