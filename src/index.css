@@ -7,6 +7,7 @@
   --color-background: #000000;
   --color-text: #ffffff;
   --color-primary: #c770f0;
+  --color-primary-10: rgba(199, 112, 240, 0.1);
   --color-accent: #ff00ff;
   --color-surface: #1a1a1a;
   --color-muted: #cccccc;
@@ -18,6 +19,7 @@
     --color-background: #000000;
     --color-text: #ffffff;
     --color-primary: #00ffff;
+    --color-primary-10: rgba(0, 255, 255, 0.1);
     --color-accent: #64fcfc;
     --color-surface: #1a1a1a;
     --color-muted: #cccccc;

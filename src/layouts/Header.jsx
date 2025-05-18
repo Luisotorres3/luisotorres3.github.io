@@ -24,10 +24,10 @@ const Header = () => {
     setMenuOpen(false);
   };
 
-  const sections = ["about", "projects", "skills", "contact"];
+  const sections = ["about", "projects", "experience", "contact"];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-background bg-opacity-70 backdrop-blur-md z-50 shadow-lg">
+    <header className="fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-xs z-50 shadow-lg">
       <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         {/* Logo / nombre */}
         <h1
@@ -80,7 +80,7 @@ const Header = () => {
 
       {/* Menú móvil desplegable */}
       {menuOpen && (
-        <nav className="md:hidden bg-background bg-opacity-90 backdrop-blur-sm px-6 pb-4 pt-2 flex flex-col gap-4 text-primary text-center">
+        <nav className="md:hidden bg-opacity-90 backdrop-blur-sm px-6 pb-4 pt-2 flex flex-col gap-4 text-primary text-center">
           {sections.map((section) => (
             <button
               key={section}
