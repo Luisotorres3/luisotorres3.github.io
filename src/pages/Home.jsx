@@ -2,13 +2,15 @@ import React from "react";
 import Header from "../layouts/Header";
 import { motion } from "framer-motion";
 
+import AboutMe from "../components/AboutMe";
+
 const Home = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9, y: 100 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="bg-black text-white overflow-x-hidden"
+      className="text-white overflow-x-hidden"
     >
       <Header />
 
@@ -16,7 +18,7 @@ const Home = () => {
         id="hero"
         className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-cyan-300 mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
           ¡Hola, soy Luis Soto Torres!
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
@@ -28,7 +30,7 @@ const Home = () => {
         id="about"
         className="min-h-screen flex items-center justify-center"
       >
-        AboutMe
+        <AboutMe />
       </section>
       <section
         id="projects"

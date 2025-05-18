@@ -26,7 +26,7 @@ const Loader = () => {
     <div className="relative w-64 h-64 flex items-center justify-center overflow-visible">
       {/* Texto central */}
       <motion.p
-        className="text-cyan-300 text-xl font-semibold tracking-wide z-10 text-center"
+        className="text-primary text-xl font-semibold tracking-wide z-10 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}

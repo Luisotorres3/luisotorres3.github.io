@@ -14,16 +14,16 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="relative z-0">
       <StarryBackground />
       {loading ? (
-        <div className="w-screen h-screen flex items-center justify-center bg-black">
+        <div className="w-screen h-screen flex items-center justify-center">
           <Loader />
         </div>
       ) : (
         <Home />
       )}
-    </>
+    </div>
   );
 };
 

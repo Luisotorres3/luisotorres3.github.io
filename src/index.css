@@ -2,3 +2,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-primary: #c770f0;
+  --color-accent: #ff00ff;
+  --color-surface: #1a1a1a;
+  --color-muted: #cccccc;
+  --bg-rgb: 0, 0, 0;
+}
+
+@layer base {
+  [theme="light"] {
+    --color-background: #000000;
+    --color-text: #ffffff;
+    --color-primary: #00ffff;
+    --color-accent: #64fcfc;
+    --color-surface: #1a1a1a;
+    --color-muted: #cccccc;
+    --bg-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .glow {
+    color: var(--color-accent);
+    filter: drop-shadow(0 0 6px var(--color-accent));
+  }
+
+  .hover\:glow:hover {
+    color: var(--color-accent);
+    filter: drop-shadow(0 0 6px var(--color-accent));
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-muted {
+    color: var(--color-muted);
+  }
+
+  .bg-background {
+    background-color: rgba(var(--bg-rgb), 0.9);
+  }
+}
