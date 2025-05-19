@@ -1,0 +1,74 @@
+[
+  {
+    "name": "MoneyScheduler",
+    "description": "Mobile App to manage your incomes",
+    "url": "https://github.com/Luisotorres3/MoneyScheduler",
+    "image": "/images/moneyscheduler.png",
+    "techs": [
+      "Kotlin",
+      "Firebase"
+    ]
+  },
+  {
+    "name": "Cartelera",
+    "description": "Cartelera online para cine con información dinámica",
+    "url": "https://github.com/Luisotorres3/Cartelera",
+    "image": "/images/cartelera.png",
+    "techs": [
+      "Kotlin",
+      "API REST"
+    ]
+  },
+  {
+    "name": "Panaderia",
+    "description": "Mobile App to manage a Bakery shop",
+    "url": "https://github.com/Luisotorres3/Panaderia",
+    "image": "/images/panaderia.png",
+    "techs": [
+      "Kotlin"
+    ]
+  },
+  {
+    "name": "Gonorte",
+    "description": "Sitio web dinámico para eventos deportivos y gestión de caballos.",
+    "url": "https://github.com/Luisotorres3/Gonorte",
+    "image": "/images/gonorte.png",
+    "techs": [
+      "JavaScript",
+      "Tailwind",
+      "React"
+    ]
+  },
+  {
+    "name": "Gestion-del-Olivar",
+    "description": "TFG sobre gestión agrícola del olivar, Universidad de Granada.",
+    "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
+    "image": "/images/olivar.png",
+    "techs": [
+      "React",
+      "Firebase",
+      "JS"
+    ]
+  },
+  {
+    "name": "portfolio_luis",
+    "description": "Mi portfolio personal con temática espacial.",
+    "url": "https://github.com/Luisotorres3/portfolio_luis",
+    "image": "/images/portfolio.png",
+    "techs": [
+      "React",
+      "Tailwind",
+      "Framer Motion"
+    ]
+  },
+  {
+    "name": "Proyecto-Informatica-Grafica",
+    "description": "Proyecto sobre OpenGL y C++ para la asignatura de Informática Gráfica.",
+    "url": "https://github.com/Luisotorres3/Proyecto-Informatica-Grafica",
+    "image": "/images/grafica.png",
+    "techs": [
+      "C++",
+      "OpenGL"
+    ]
+  }
+]

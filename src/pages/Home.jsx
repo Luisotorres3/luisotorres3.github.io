@@ -6,6 +6,7 @@ import AboutMe from "../components/AboutMe";
 import PlanetSystem from "../components/PlanetSystem";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
 
       {/* Puedes dejar estos para después */}
       {/* <Projects /> */}
+      <Projects />
       {/* <Contact /> */}
 
       <footer className="text-center text-sm text-muted py-6">
