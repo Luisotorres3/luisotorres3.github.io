@@ -1,8 +1,8 @@
 import React from "react";
 import data from "../data/about.json";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
-// Genera colores estilo galaxia
+// Genera colores tipo galaxia
 const randomColor = (idx) => {
   const hue = (idx * 37) % 360;
   return `hsl(${hue}, 100%, 40%)`;
@@ -10,12 +10,6 @@ const randomColor = (idx) => {
 
 const PlanetSystem = () => {
   const skills = data.skills.slice(0, 12);
-  const baseRotation = useMotionValue(0);
-  const smoothRotation = useSpring(baseRotation, {
-    stiffness: 20,
-    damping: 10,
-    mass: 2,
-  });
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const baseRadius = isMobile ? 80 : 160;
@@ -28,7 +22,7 @@ const PlanetSystem = () => {
       id="planet-system"
       className="relative w-full h-[500px] md:h-[600px] flex items-center justify-center text-text"
     >
-      {/* Orbitales */}
+      {/* Órbitas circulares */}
       {[0, 1, 2].map((i) => {
         const r = baseRadius + i * orbitSteps;
         return (
@@ -45,11 +39,10 @@ const PlanetSystem = () => {
         );
       })}
 
-      {/* Sistema giratorio */}
+      {/* Contenedor giratorio */}
       <motion.div
         className="absolute w-full h-full flex items-center justify-center"
         animate={{ rotate: 360 }}
-        style={{ rotate: smoothRotation }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
         {skills.map((skill, idx) => {
@@ -61,7 +54,6 @@ const PlanetSystem = () => {
           const x = radius * Math.cos(angleRad);
           const y = radius * Math.sin(angleRad);
           const color = randomColor(idx);
-          const rotateText = useTransform(smoothRotation, (r) => -r);
 
           return (
             <motion.div
@@ -79,7 +71,8 @@ const PlanetSystem = () => {
             >
               <motion.div
                 className="text-[10px] md:text-xs font-bold text-white text-center px-1 pointer-events-none"
-                style={{ rotate: rotateText }}
+                animate={{ rotate: -360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
               >
                 {skill}
               </motion.div>
@@ -90,7 +83,7 @@ const PlanetSystem = () => {
 
       {/* Estrella central */}
       <div
-        className="z-10 w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-background text-base md:text-xl font-bold shadow-2xl border-1 border-accent text-white"
+        className="z-10 w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-background text-base md:text-xl font-bold shadow-2xl border border-accent text-white"
         style={{
           background: `radial-gradient(circle at 30% 30%, var(--color-primary), #111)`,
         }}
