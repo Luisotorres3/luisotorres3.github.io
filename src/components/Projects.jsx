@@ -1,68 +1,156 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import projects from "../data/projects.json";
+import {
+  SiKotlin,
+  SiFirebase,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiOpengl,
+  SiFramer,
+  SiGithub,
+} from "react-icons/si";
+import { FaExpandAlt } from "react-icons/fa";
 
-// Puedes mapear iconos aquí o usar un lib externo tipo react-icons o imágenes SVG
 const techIcons = {
-  Kotlin: "🟣",
-  Firebase: "🔥",
-  "API REST": "🔗",
-  JavaScript: "🟨",
-  React: "⚛️",
-  Tailwind: "💨",
-  "Framer Motion": "🎞️",
-  OpenGL: "🟩",
-  "C++": "💻",
+  Kotlin: <SiKotlin className="text-xl text-[#7F52FF]" />,
+  Firebase: <SiFirebase className="text-xl text-yellow-400" />,
+  "API REST": <SiJavascript className="text-xl text-yellow-300" />,
+  JavaScript: <SiJavascript className="text-xl text-yellow-300" />,
+  React: <SiReact className="text-xl text-cyan-400" />,
+  "Framer Motion": <SiFramer className="text-xl text-pink-400" />,
+  Tailwind: <SiTailwindcss className="text-xl text-sky-400" />,
+  OpenGL: <SiOpengl className="text-xl text-green-300" />,
+  "C++": <span className="text-xl text-white">💻</span>,
 };
 
 const Projects = () => {
+  const [selected, setSelected] = useState(null);
+
+  const handleSelect = (project) => {
+    setSelected(project);
+  };
+
+  const handleBack = () => {
+    setSelected(null);
+  };
+
   return (
-    <section id="projects" className="min-h-screen text-text px-6 py-20">
+    <section
+      id="projects"
+      className="min-h-screen text-text px-4 md:px-6 py-20"
+    >
       <h2 className="text-4xl font-bold text-primary text-center mb-12 tracking-widest">
         👽 Archivos Clasificados
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-        {projects.map((proj, i) => (
+      {/* Vista detallada */}
+      <AnimatePresence mode="wait">
+        {selected ? (
           <motion.div
-            key={i}
-            className="relative bg-white/5 border border-accent rounded-xl p-6 backdrop-blur-md shadow-md hover:scale-105 hover:shadow-accent transition-all duration-300 text-left font-mono text-sm text-muted tracking-wide space-y-3 overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
+            key={selected.name}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-4xl mx-auto bg-white/5 border border-accent rounded-xl p-6 backdrop-blur-md shadow-md"
           >
-            {/* Sello de TOP SECRET semitransparente */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
-              <div className="w-full h-full bg-contain bg-center bg-no-repeat" />
-            </div>
-
-            <h3 className="text-accent text-lg font-bold uppercase tracking-widest z-10 relative">
-              {proj.name}
+            <h3 className="text-3xl font-bold text-accent mb-2">
+              {selected.name}
             </h3>
-            <p className="z-10 relative">📄 {proj.description}</p>
-            <div className="flex flex-wrap gap-2 z-10 relative">
-              {proj.techs.map((tech) => (
+            <p className="text-muted mb-4">{selected.description}</p>
+
+            <div className="flex flex-wrap gap-2 mb-6">
+              {selected.techs.map((tech, i) => (
                 <span
-                  key={tech}
-                  className="bg-primary/10 text-primary border border-primary/30 rounded-full px-2 py-1 text-xs flex items-center gap-1"
+                  key={i}
+                  className="flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary border border-primary/30 rounded-full text-xs"
                 >
-                  <span>{techIcons[tech] || "🛸"}</span>
-                  <span>{tech}</span>
+                  {techIcons[tech] || "🛸"} {tech}
                 </span>
               ))}
             </div>
-            <a
-              href={proj.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline hover:glow block mt-2 z-10 relative"
-            >
-              📡 Ver archivo en GitHub
-            </a>
+
+            {/* Vídeo demo */}
+            <div className="aspect-video w-full mb-6">
+              <iframe
+                src={selected.video}
+                title={`${selected.name} demo`}
+                allowFullScreen
+                className="w-full h-full rounded-md border border-white/10"
+              />
+            </div>
+
+            <div className="flex justify-between">
+              <a
+                href={selected.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-xl hover:glow"
+              >
+                <SiGithub />
+              </a>
+              <button
+                onClick={handleBack}
+                className="text-sm text-muted underline hover:text-accent"
+              >
+                ← Volver
+              </button>
+            </div>
           </motion.div>
-        ))}
-      </div>
+        ) : (
+          // Vista resumida
+          <motion.div
+            layout
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
+          >
+            {projects.map((proj, i) => (
+              <motion.div
+                key={i}
+                className="group bg-white/5 border border-accent rounded-xl p-5 backdrop-blur-md shadow-md transition-all duration-300 text-left font-mono text-sm text-muted hover:scale-[1.02] cursor-pointer"
+                onClick={() => handleSelect(proj)}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-accent text-base font-bold uppercase tracking-widest">
+                    {proj.name}
+                  </h3>
+                  <a
+                    href={proj.url}
+                    onClick={(e) => e.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:glow"
+                  >
+                    <SiGithub className="text-xl" />
+                  </a>
+                </div>
+
+                <p className="text-xs mb-3">{proj.description}</p>
+
+                {/* Tecnologías */}
+                <div className="flex flex-wrap gap-2">
+                  {proj.techs.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary border border-primary/30 rounded-full text-xs"
+                    >
+                      {techIcons[tech] || "🛸"} {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Indicador de clic */}
+                <div className="flex justify-end mt-4 text-xs text-muted group-hover:text-accent">
+                  <FaExpandAlt className="mr-1" />
+                  Ver más
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

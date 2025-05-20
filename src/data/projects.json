@@ -4,71 +4,55 @@
     "description": "Mobile App to manage your incomes",
     "url": "https://github.com/Luisotorres3/MoneyScheduler",
     "image": "/images/moneyscheduler.png",
-    "techs": [
-      "Kotlin",
-      "Firebase"
-    ]
+    "techs": ["Kotlin", "Firebase"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "Cartelera",
     "description": "Cartelera online para cine con información dinámica",
     "url": "https://github.com/Luisotorres3/Cartelera",
     "image": "/images/cartelera.png",
-    "techs": [
-      "Kotlin",
-      "API REST"
-    ]
+    "techs": ["Kotlin", "API REST"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "Panaderia",
     "description": "Mobile App to manage a Bakery shop",
     "url": "https://github.com/Luisotorres3/Panaderia",
     "image": "/images/panaderia.png",
-    "techs": [
-      "Kotlin"
-    ]
+    "techs": ["Kotlin"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "Gonorte",
     "description": "Sitio web dinámico para eventos deportivos y gestión de caballos.",
     "url": "https://github.com/Luisotorres3/Gonorte",
     "image": "/images/gonorte.png",
-    "techs": [
-      "JavaScript",
-      "Tailwind",
-      "React"
-    ]
+    "techs": ["JavaScript", "Tailwind", "React"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "Gestion-del-Olivar",
     "description": "TFG sobre gestión agrícola del olivar, Universidad de Granada.",
     "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
     "image": "/images/olivar.png",
-    "techs": [
-      "React",
-      "Firebase",
-      "JS"
-    ]
+    "techs": ["React", "Firebase", "JS"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "portfolio_luis",
     "description": "Mi portfolio personal con temática espacial.",
     "url": "https://github.com/Luisotorres3/portfolio_luis",
     "image": "/images/portfolio.png",
-    "techs": [
-      "React",
-      "Tailwind",
-      "Framer Motion"
-    ]
+    "techs": ["React", "Tailwind", "Framer Motion"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
     "name": "Proyecto-Informatica-Grafica",
     "description": "Proyecto sobre OpenGL y C++ para la asignatura de Informática Gráfica.",
     "url": "https://github.com/Luisotorres3/Proyecto-Informatica-Grafica",
     "image": "/images/grafica.png",
-    "techs": [
-      "C++",
-      "OpenGL"
-    ]
+    "techs": ["C++", "OpenGL"],
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   }
 ]
