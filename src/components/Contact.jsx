@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FiSend } from "react-icons/fi";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const form = useRef();
   const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (e) => {
@@ -17,29 +14,27 @@ const Contact = () => {
     setStatus("sending");
 
     try {
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await emailjs.sendForm(
+        "Portfolio Request", // Service ID from EmailJS
+        "template_hsera9j", // Template ID from EmailJS
+        form.current,
+        "Ztawn-oBOA0GMKJq8" // Public Key from EmailJS
+      );
+
       setStatus("success");
-      setFormState({ name: "", email: "", message: "" });
+      e.target.reset();
       setTimeout(() => setStatus("idle"), 3000);
     } catch (error) {
+      console.error("Error sending message:", error);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
     }
   };
 
-  const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden"
+      className="relative min-h-screen w-full px-6 py-16 flex flex-col items-center justify-center"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(var(--color-primary),0.15),transparent_70%)] pointer-events-none" />
@@ -60,36 +55,33 @@ const Contact = () => {
 
         {/* Form */}
         <form
+          ref={form}
           onSubmit={handleSubmit}
           className="bg-white/5 backdrop-blur-lg border border-accent/20 rounded-xl p-8 shadow-xl space-y-6"
         >
           <div className="space-y-2">
-            <label htmlFor="name" className="text-primary">
+            <label htmlFor="user_name" className="text-primary">
               {t("contact.name")}
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="user_name"
+              name="user_name"
               required
-              value={formState.name}
-              onChange={handleChange}
               placeholder={t("contact.placeholders.name")}
               className="w-full px-4 py-2 bg-white/5 border border-accent/20 rounded-lg focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent text-text placeholder:text-muted/50"
             />
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="text-primary">
+            <label htmlFor="user_email" className="text-primary">
               {t("contact.email")}
             </label>
             <input
               type="email"
-              id="email"
-              name="email"
+              id="user_email"
+              name="user_email"
               required
-              value={formState.email}
-              onChange={handleChange}
               placeholder={t("contact.placeholders.email")}
               className="w-full px-4 py-2 bg-white/5 border border-accent/20 rounded-lg focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent text-text placeholder:text-muted/50"
             />
@@ -103,8 +95,6 @@ const Contact = () => {
               id="message"
               name="message"
               required
-              value={formState.message}
-              onChange={handleChange}
               placeholder={t("contact.placeholders.message")}
               rows="4"
               className="w-full px-4 py-2 bg-white/5 border border-accent/20 rounded-lg focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent text-text placeholder:text-muted/50 resize-none"

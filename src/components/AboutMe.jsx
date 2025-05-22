@@ -11,7 +11,7 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="min-h-screen w-full flex items-center justify-center px-6 py-16 bg-background text-text transition-colors duration-500"
+      className="min-h-screen w-full flex items-center justify-center px-6 py-16 text-text transition-colors duration-500"
     >
       <motion.div
         className="max-w-5xl w-full flex flex-col md:flex-row gap-12 items-center border-2 border-accent rounded-2xl p-6 shadow-2xl bg-gradient-to-br from-[#0e0e2c] to-[#1a1a40]"

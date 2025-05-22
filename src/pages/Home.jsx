@@ -18,14 +18,6 @@ const Home = () => {
       transition={{ duration: 1, ease: "easeOut" }}
       className="text-white overflow-x-hidden"
     >
-      {/* Decorative star lines in background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="w-full h-full bg-[radial-gradient(circle_at_50%_0%,var(--color-primary-10),transparent_20%)] animate-pulse-slow" />
-      </div>
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="w-full h-full bg-[radial-gradient(circle_at_50%_100%,var(--color-primary-10),transparent_20%)] animate-pulse-slow" />
-      </div>
-
       <Header />
       <Hero />
 

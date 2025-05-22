@@ -32,10 +32,6 @@ const Footer = () => {
 
   return (
     <footer className="relative w-full py-12 px-6 overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(var(--color-primary),0.1),transparent_50%)] pointer-events-none" />
-
       <div className="relative max-w-7xl mx-auto">
         {/* Social links */}
         <div className="flex justify-center gap-6 mb-8">

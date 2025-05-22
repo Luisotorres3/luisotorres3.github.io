@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const RocketTransition = ({ isVisible, onAnimationComplete }) => {
+const RocketTransition = ({ isVisible, onTransitionEnd }) => {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -10,10 +10,10 @@ const RocketTransition = ({ isVisible, onAnimationComplete }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          onAnimationComplete={onAnimationComplete}
         >
           <motion.div
             className="relative"
+            onAnimationComplete={onTransitionEnd}
             initial={{ scale: 0.5, y: 100 }}
             animate={{
               scale: [0.5, 1, 1, 0.5],
@@ -21,7 +21,7 @@ const RocketTransition = ({ isVisible, onAnimationComplete }) => {
               rotate: [0, 0, 0, 45],
             }}
             transition={{
-              duration: 1.5,
+              duration: 1,
               times: [0, 0.3, 0.7, 1],
             }}
           >

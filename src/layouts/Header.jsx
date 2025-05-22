@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-import ScrollLink from "../components/ScrollLink";
+import ScrollLink from "../components/ScrollRocketLink";
 import LanguageSelector from "../components/LanguageSelector";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -39,7 +39,7 @@ const Header = () => {
   const sections = ["about", "experience", "projects", "contact"];
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full bg-background/95 md:bg-background/80 backdrop-blur-md z-50 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 w-full bg-background/80 backdrop-blur-md z-50">
       <div className="flex justify-between items-center px-4 md:px-6 py-4 max-w-7xl mx-auto">
         {/* Logo / nombre */}
         <ScrollLink
@@ -111,20 +111,12 @@ const Header = () => {
               }
             }}
           >
-            {/* Fondo con efecto espacial */}
-            <div className="absolute inset-0 bg-background/98">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(var(--color-primary),0.15),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(var(--color-accent),0.15),transparent_30%)] animate-pulse-slow" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(var(--color-accent),0.1),transparent_30%)] animate-pulse-slow" />
-              <div className="absolute inset-0 backdrop-blur-md" />
-            </div>
-
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="relative h-[100dvh] flex flex-col items-center justify-center gap-12 text-primary text-center px-6 bg-background/98 backdrop-blur-md z-40"
+              className="relative h-[100dvh] flex flex-col items-center justify-center gap-12 text-primary text-center px-6 bg-background/90 backdrop-blur-md z-40"
             >
               {sections.map((section, index) => (
                 <motion.div

@@ -7,11 +7,12 @@ const RocketLink = ({ href, children, className = "" }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setShowRocket(true);
-  };
 
-  const handleAnimationComplete = () => {
-    // Navegar a la nueva página después de que termine la animación
-    window.location.href = href;
+    // Navegar después de un breve retraso para la animación
+    setTimeout(() => {
+      window.open(href, "_blank", "noopener,noreferrer");
+      setShowRocket(false);
+    }, 1000);
   };
 
   return (
@@ -29,10 +30,7 @@ const RocketLink = ({ href, children, className = "" }) => {
           🚀
         </span>
       </a>
-      <RocketTransition
-        isVisible={showRocket}
-        onAnimationComplete={handleAnimationComplete}
-      />
+      <RocketTransition isVisible={showRocket} onAnimationComplete={() => {}} />
     </>
   );
 };
