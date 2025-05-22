@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../data/about.json";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Genera colores tipo galaxia
 const randomColor = (idx) => {
@@ -9,7 +9,9 @@ const randomColor = (idx) => {
 };
 
 const PlanetSystem = () => {
-  const skills = data.skills.slice(0, 12);
+  const { t } = useTranslation();
+  const skills = t("about.skills", { returnObjects: true });
+  const skillsToShow = skills?.slice(0, 12) || [];
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const baseRadius = isMobile ? 80 : 160;
@@ -45,8 +47,8 @@ const PlanetSystem = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
-        {skills.map((skill, idx) => {
-          const angleDeg = (360 / skills.length) * idx;
+        {skillsToShow.map((skill, idx) => {
+          const angleDeg = (360 / skillsToShow.length) * idx;
           const angleRad = (angleDeg * Math.PI) / 180;
           const orbitLevel = idx % 3;
           const radius = baseRadius + orbitLevel * orbitSteps;
@@ -88,7 +90,7 @@ const PlanetSystem = () => {
           background: `radial-gradient(circle at 30% 30%, var(--color-primary), #111)`,
         }}
       >
-        My Skills
+        {t("about.mySkills", "My Skills")}
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const Header = () => {
     setMenuOpen(false);
   };
 
-  const sections = ["about", "projects", "experience", "contact"];
+  const sections = ["about", "experience", "projects", "contact"];
 
   return (
     <header className="fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-xs z-50 shadow-lg">

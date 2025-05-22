@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import projects from "../data/projects.json";
+import { useTranslation } from "react-i18next";
 import {
   SiKotlin,
   SiFirebase,
@@ -27,6 +27,8 @@ const techIcons = {
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
+  const { t } = useTranslation();
+  const projects = t("projects.list", { returnObjects: true });
 
   const handleSelect = (project) => {
     setSelected(project);
@@ -42,7 +44,7 @@ const Projects = () => {
       className="min-h-screen text-text px-4 md:px-6 py-20"
     >
       <h2 className="text-4xl font-bold text-primary text-center mb-12 tracking-widest">
-        👽 Archivos Clasificados
+        {t("projects.title")}
       </h2>
 
       {/* Vista detallada */}
@@ -95,7 +97,7 @@ const Projects = () => {
                 onClick={handleBack}
                 className="text-sm text-muted underline hover:text-accent"
               >
-                ← Volver
+                {t("projects.back")}
               </button>
             </div>
           </motion.div>
@@ -105,7 +107,7 @@ const Projects = () => {
             layout
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto"
           >
-            {projects.map((proj, i) => (
+            {projects?.map((proj, i) => (
               <motion.div
                 key={i}
                 className="group bg-white/5 border border-accent rounded-xl p-5 backdrop-blur-md shadow-md transition-all duration-300 text-left font-mono text-sm text-muted hover:scale-[1.02] cursor-pointer"
@@ -144,7 +146,7 @@ const Projects = () => {
                 {/* Indicador de clic */}
                 <div className="flex justify-end mt-4 text-xs text-muted group-hover:text-accent">
                   <FaExpandAlt className="mr-1" />
-                  Ver más
+                  {t("projects.viewMore")}
                 </div>
               </motion.div>
             ))}

@@ -13,10 +13,78 @@
     "contact": "Contact"
   },
 
+  "projects": {
+    "list": [
+      {
+        "name": "MoneyScheduler",
+        "description": "Mobile App to manage your incomes and expenses",
+        "url": "https://github.com/Luisotorres3/MoneyScheduler",
+        "image": "/images/moneyscheduler.png",
+        "techs": ["Kotlin", "Firebase"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Cartelera",
+        "description": "Online movie billboard with dynamic information",
+        "url": "https://github.com/Luisotorres3/Cartelera",
+        "image": "/images/cartelera.png",
+        "techs": ["Kotlin", "API REST"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Panaderia",
+        "description": "Mobile App to manage a Bakery shop",
+        "url": "https://github.com/Luisotorres3/Panaderia",
+        "image": "/images/panaderia.png",
+        "techs": ["Kotlin"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Gonorte",
+        "description": "Dynamic website for sports events and horse management",
+        "url": "https://github.com/Luisotorres3/Gonorte",
+        "image": "/images/gonorte.png",
+        "techs": ["JavaScript", "Tailwind", "React"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Olive Grove Management",
+        "description": "Final degree project on olive grove agricultural management, University of Granada",
+        "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
+        "image": "/images/olivar.png",
+        "techs": ["React", "Firebase", "JS"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Luis Portfolio",
+        "description": "My personal portfolio with space theme",
+        "url": "https://github.com/Luisotorres3/portfolio_luis",
+        "image": "/images/portfolio.png",
+        "techs": ["React", "Tailwind", "Framer Motion"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      }
+    ]
+  },
+
   "about": {
     "name": "Luis Soto Torres",
     "title": "Computer Engineer & C++ Developer",
     "description": "Developer with experience in C++, Java, artificial intelligence, and web development. Passionate about space technology, interactive interfaces, and continuous learning.",
+    "mySkills": "My Skills",
+    "skills": [
+      "C++",
+      "Java",
+      "JavaScript",
+      "Python",
+      "HTML",
+      "CSS",
+      "Kotlin",
+      "React",
+      "Tailwind CSS",
+      "Git",
+      "Linux",
+      "Agile"
+    ],
     "hobbies": [
       "Astronomy",
       "Videogames",
@@ -47,5 +115,22 @@
         "description": "Internal project for time tracking using Power BI, JSON, Java, and Node-RED."
       }
     ]
+  },
+
+  "contact": {
+    "title": "🛸 Contact Me",
+    "subtitle": "Let's explore the universe together!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! 🚀",
+    "error": "Oops! Something went wrong. Please try again.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "message": "Write your message here..."
+    }
   }
 }

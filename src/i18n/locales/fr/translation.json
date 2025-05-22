@@ -1,7 +1,7 @@
 {
   "hero.title": "Salut, je suis Luis Soto Torres !",
   "hero.subtitle": "Ingénieur en informatique explorant l'univers du développement web 🚀",
-  "hero.description": "Passionné par la technologie, l’innovation et le design frontend cosmique.",
+  "hero.description": "Passionné par la technologie, l'innovation et le design frontend cosmique.",
   "projects.title": "👽 Dossiers Classifiés",
   "projects.viewMore": "Voir plus",
   "projects.back": "← Retour",
@@ -14,17 +14,85 @@
     "contact": "Contact"
   },
 
-   "about": {
+  "projects": {
+    "list": [
+      {
+        "name": "MoneyScheduler",
+        "description": "Application mobile pour gérer vos revenus et dépenses",
+        "url": "https://github.com/Luisotorres3/MoneyScheduler",
+        "image": "/images/moneyscheduler.png",
+        "techs": ["Kotlin", "Firebase"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Cartelera",
+        "description": "Panneau d'affichage de cinéma en ligne avec informations dynamiques",
+        "url": "https://github.com/Luisotorres3/Cartelera",
+        "image": "/images/cartelera.png",
+        "techs": ["Kotlin", "API REST"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Panaderia",
+        "description": "Application mobile pour gérer une boulangerie",
+        "url": "https://github.com/Luisotorres3/Panaderia",
+        "image": "/images/panaderia.png",
+        "techs": ["Kotlin"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Gonorte",
+        "description": "Site web dynamique pour événements sportifs et gestion équine",
+        "url": "https://github.com/Luisotorres3/Gonorte",
+        "image": "/images/gonorte.png",
+        "techs": ["JavaScript", "Tailwind", "React"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Gestion de l'Oliveraie",
+        "description": "Projet de fin d'études sur la gestion agricole des oliveraies, Université de Grenade",
+        "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
+        "image": "/images/olivar.png",
+        "techs": ["React", "Firebase", "JS"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Portfolio Luis",
+        "description": "Mon portfolio personnel avec thème spatial",
+        "url": "https://github.com/Luisotorres3/portfolio_luis",
+        "image": "/images/portfolio.png",
+        "techs": ["React", "Tailwind", "Framer Motion"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      }
+    ]
+  },
+
+  "about": {
     "name": "Luis Soto Torres",
     "title": "Ingénieur Informatique et Développeur C++",
-    "description": "Développeur avec expérience en C++, Java, intelligence artificielle et développement web. Passionné par la technologie spatiale, les interfaces interactives et l’apprentissage continu.",
+    "description": "Développeur avec expérience en C++, Java, intelligence artificielle et développement web. Passionné par la technologie spatiale, les interfaces interactives et l'apprentissage continu.",
+    "mySkills": "Mes Compétences",
+    "skills": [
+      "C++",
+      "Java",
+      "JavaScript",
+      "Python",
+      "HTML",
+      "CSS",
+      "Kotlin",
+      "React",
+      "Tailwind CSS",
+      "Git",
+      "Linux",
+      "Agile"
+    ],
     "hobbies": [
       "Astronomie",
       "Jeux vidéo",
       "Technologie",
       "Café ☕",
       "Animation 3D",
-      "Développement d’applications"
+      "Développement d'applications"
     ],
     "languages": [
       { "name": "Espagnol", "level": "Natif" },
@@ -48,5 +116,22 @@
         "description": "Projet interne de suivi horaire avec Power BI, JSON, Java et Node-RED."
       }
     ]
+  },
+
+  "contact": {
+    "title": "🛸 Contactez-moi",
+    "subtitle": "Explorons l'univers ensemble !",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès ! 🚀",
+    "error": "Oups ! Quelque chose s'est mal passé. Veuillez réessayer.",
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "votre@email.com",
+      "message": "Écrivez votre message ici..."
+    }
   }
 }

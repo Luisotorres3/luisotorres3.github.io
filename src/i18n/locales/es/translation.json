@@ -13,10 +13,78 @@
     "contact": "Contacto"
   },
 
+  "projects": {
+    "list": [
+      {
+        "name": "MoneyScheduler",
+        "description": "Aplicación móvil para gestionar tus ingresos y gastos",
+        "url": "https://github.com/Luisotorres3/MoneyScheduler",
+        "image": "/images/moneyscheduler.png",
+        "techs": ["Kotlin", "Firebase"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Cartelera",
+        "description": "Cartelera online para cine con información dinámica",
+        "url": "https://github.com/Luisotorres3/Cartelera",
+        "image": "/images/cartelera.png",
+        "techs": ["Kotlin", "API REST"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Panaderia",
+        "description": "Aplicación móvil para gestionar una panadería",
+        "url": "https://github.com/Luisotorres3/Panaderia",
+        "image": "/images/panaderia.png",
+        "techs": ["Kotlin"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Gonorte",
+        "description": "Sitio web dinámico para eventos deportivos y gestión de caballos",
+        "url": "https://github.com/Luisotorres3/Gonorte",
+        "image": "/images/gonorte.png",
+        "techs": ["JavaScript", "Tailwind", "React"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Gestión del Olivar",
+        "description": "TFG sobre gestión agrícola del olivar, Universidad de Granada",
+        "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
+        "image": "/images/olivar.png",
+        "techs": ["React", "Firebase", "JS"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      },
+      {
+        "name": "Portfolio Luis",
+        "description": "Mi portfolio personal con temática espacial",
+        "url": "https://github.com/Luisotorres3/portfolio_luis",
+        "image": "/images/portfolio.png",
+        "techs": ["React", "Tailwind", "Framer Motion"],
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      }
+    ]
+  },
+
   "about": {
     "name": "Luis Soto Torres",
     "title": "Ingeniero Informático y Desarrollador C++",
     "description": "Desarrollador con experiencia en C++, Java, inteligencia artificial y desarrollo web. Apasionado por la tecnología espacial, interfaces interactivas y el aprendizaje continuo.",
+    "mySkills": "Mis Habilidades",
+    "skills": [
+      "C++",
+      "Java",
+      "JavaScript",
+      "Python",
+      "HTML",
+      "CSS",
+      "Kotlin",
+      "React",
+      "Tailwind CSS",
+      "Git",
+      "Linux",
+      "Agile"
+    ],
     "hobbies": [
       "Astronomía",
       "Videojuegos",
@@ -47,6 +115,23 @@
         "description": "Proyecto interno para seguimiento horario con Power BI, JSON, Java y Node-RED."
       }
     ]
+  },
+
+  "contact": {
+    "title": "🛸 Contáctame",
+    "subtitle": "¡Exploremos el universo juntos!",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito! 🚀",
+    "error": "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo.",
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@correo.com",
+      "message": "Escribe tu mensaje aquí..."
+    }
   }
 }
 

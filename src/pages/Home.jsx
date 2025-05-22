@@ -7,6 +7,8 @@ import PlanetSystem from "../components/PlanetSystem";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Footer from "../layouts/Footer";
 
 const Home = () => {
   return (
@@ -36,11 +38,8 @@ const Home = () => {
       {/* Puedes dejar estos para después */}
       {/* <Projects /> */}
       <Projects />
-      {/* <Contact /> */}
-
-      <footer className="text-center text-sm text-muted py-6">
-        © 2025 Luis Soto Torres. Todos los derechos reservados.
-      </footer>
+      <Contact />
+      <Footer />
     </motion.div>
   );
 };
