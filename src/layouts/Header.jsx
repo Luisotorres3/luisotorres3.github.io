@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+
+import LanguageSelector from "../components/LanguageSelector"; // Ajusta si es necesario
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
+  const { t } = useTranslation();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -45,22 +50,25 @@ const Header = () => {
               onClick={() => scrollToSection(section)}
               className="relative py-1 transition-all duration-300 group transform hover:scale-110 hover:glow"
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {t(`sections.${section}`)}
               <span className="absolute left-0 bottom-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </button>
           ))}
 
+          {/* Selector de idioma */}
+          <LanguageSelector />
+
           {/* Toggle claro/oscuro */}
           <button
             onClick={toggleTheme}
-            className="text-xl hover:text-accent transition-all duration-300 ml-4"
+            className="text-xl hover:text-accent transition-all duration-300 ml-2"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <FiSun /> : <FiMoon />}
           </button>
         </nav>
 
-        {/* Botón menú móvil con toggle */}
+        {/* Botón menú móvil */}
         <div className="md:hidden flex items-center gap-4">
           <button
             onClick={toggleTheme}
@@ -78,7 +86,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Menú móvil desplegable */}
+      {/* Menú móvil */}
       {menuOpen && (
         <nav className="md:hidden bg-opacity-90 backdrop-blur-sm px-6 pb-4 pt-2 flex flex-col gap-4 text-primary text-center">
           {sections.map((section) => (
@@ -87,9 +95,13 @@ const Header = () => {
               onClick={() => scrollToSection(section)}
               className="py-1 transition duration-300 hover:text-accent"
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {t(`sections.${section}`)}
             </button>
           ))}
+
+          <div className="self-center mt-2">
+            <LanguageSelector />
+          </div>
         </nav>
       )}
     </header>

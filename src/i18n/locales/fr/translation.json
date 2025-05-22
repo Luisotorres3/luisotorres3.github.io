@@ -1,0 +1,52 @@
+{
+  "hero.title": "Salut, je suis Luis Soto Torres !",
+  "hero.subtitle": "Ingénieur en informatique explorant l'univers du développement web 🚀",
+  "hero.description": "Passionné par la technologie, l’innovation et le design frontend cosmique.",
+  "projects.title": "👽 Dossiers Classifiés",
+  "projects.viewMore": "Voir plus",
+  "projects.back": "← Retour",
+  "projects.demo": "Voir sur GitHub",
+
+  "sections": {
+    "about": "À propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+
+   "about": {
+    "name": "Luis Soto Torres",
+    "title": "Ingénieur Informatique et Développeur C++",
+    "description": "Développeur avec expérience en C++, Java, intelligence artificielle et développement web. Passionné par la technologie spatiale, les interfaces interactives et l’apprentissage continu.",
+    "hobbies": [
+      "Astronomie",
+      "Jeux vidéo",
+      "Technologie",
+      "Café ☕",
+      "Animation 3D",
+      "Développement d’applications"
+    ],
+    "languages": [
+      { "name": "Espagnol", "level": "Natif" },
+      { "name": "Anglais", "level": "Avancé (FCE)" },
+      { "name": "Français", "level": "Basique (B2)" },
+      { "name": "Finnois", "level": "Basique (A1)" }
+    ],
+    "experience": [
+      {
+        "role": "Développeur C++",
+        "company": "Amadeus",
+        "location": "Nice, France",
+        "period": "Sep 2023 – Actuel",
+        "description": "Développement de services auxiliaires pour des compagnies aériennes comme Southwest Airlines, Air France et d'autres, en C++ dans des environnements Agile."
+      },
+      {
+        "role": "Développeur Junior",
+        "company": "NTT Data",
+        "location": "Grenade, Espagne (Télétravail)",
+        "period": "Mar 2023 – Sep 2023",
+        "description": "Projet interne de suivi horaire avec Power BI, JSON, Java et Node-RED."
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "hero.title": "¡Hola, soy Luis Soto Torres!",
+  "hero.subtitle": "Ingeniero Informático explorando el universo del desarrollo web 🚀",
+  "projects.title": "👽 Archivos Clasificados",
+  "projects.viewMore": "Ver más",
+  "projects.back": "← Volver",
+  "projects.demo": "Ver en GitHub",
+
+  "sections": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+
+  "about": {
+    "name": "Luis Soto Torres",
+    "title": "Ingeniero Informático y Desarrollador C++",
+    "description": "Desarrollador con experiencia en C++, Java, inteligencia artificial y desarrollo web. Apasionado por la tecnología espacial, interfaces interactivas y el aprendizaje continuo.",
+    "hobbies": [
+      "Astronomía",
+      "Videojuegos",
+      "Tecnología",
+      "Café ☕",
+      "Animación 3D",
+      "Desarrollo de Apps"
+    ],
+    "languages": [
+      { "name": "Español", "level": "Nativo" },
+      { "name": "Inglés", "level": "Avanzado (FCE)" },
+      { "name": "Francés", "level": "Básico (B2)" },
+      { "name": "Finés", "level": "Básico (A1)" }
+    ],
+    "experience": [
+      {
+        "role": "C++ Developer",
+        "company": "Amadeus",
+        "location": "Niza, Francia",
+        "period": "Sep 2023 – Actualidad",
+        "description": "Desarrollo de servicios auxiliares para aerolíneas como Southwest Airlines, Air France y más usando C++ en entornos Agile."
+      },
+      {
+        "role": "Junior Developer",
+        "company": "NTT Data",
+        "location": "Granada, España (Remoto)",
+        "period": "Mar 2023 – Sep 2023",
+        "description": "Proyecto interno para seguimiento horario con Power BI, JSON, Java y Node-RED."
+      }
+    ]
+  }
+}
+
+
+
+

@@ -1,0 +1,51 @@
+{
+  "hero.title": "Hi, I'm Luis Soto Torres!",
+  "hero.subtitle": "Computer Engineer exploring the universe of web development 🚀",
+  "projects.title": "👽 Classified Files",
+  "projects.viewMore": "View more",
+  "projects.back": "← Back",
+  "projects.demo": "View on GitHub",
+
+  "sections": {
+    "about": "About Me",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+
+  "about": {
+    "name": "Luis Soto Torres",
+    "title": "Computer Engineer & C++ Developer",
+    "description": "Developer with experience in C++, Java, artificial intelligence, and web development. Passionate about space technology, interactive interfaces, and continuous learning.",
+    "hobbies": [
+      "Astronomy",
+      "Videogames",
+      "Technology",
+      "Coffee ☕",
+      "3D Animation",
+      "App Development"
+    ],
+    "languages": [
+      { "name": "Spanish", "level": "Native" },
+      { "name": "English", "level": "Advanced (FCE)" },
+      { "name": "French", "level": "Basic (B2)" },
+      { "name": "Finnish", "level": "Basic (A1)" }
+    ],
+    "experience": [
+      {
+        "role": "C++ Developer",
+        "company": "Amadeus",
+        "location": "Nice, France",
+        "period": "Sep 2023 – Present",
+        "description": "Development of auxiliary services for airlines like Southwest Airlines, Air France, and more using C++ in Agile environments."
+      },
+      {
+        "role": "Junior Developer",
+        "company": "NTT Data",
+        "location": "Granada, Spain (Remote)",
+        "period": "Mar 2023 – Sep 2023",
+        "description": "Internal project for time tracking using Power BI, JSON, Java, and Node-RED."
+      }
+    ]
+  }
+}
