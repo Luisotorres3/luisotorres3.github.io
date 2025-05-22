@@ -3,14 +3,14 @@ import i18n from "i18next";
 
 const languages = [
   {
-    code: "es",
-    flag: "https://flagcdn.com/es.svg",
-    name: "ES",
-  },
-  {
     code: "en",
     flag: "https://flagcdn.com/gb.svg",
     name: "EN",
+  },
+  {
+    code: "es",
+    flag: "https://flagcdn.com/es.svg",
+    name: "ES",
   },
   {
     code: "fr",
@@ -21,7 +21,7 @@ const languages = [
 
 const LanguageSelector = () => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(i18n.language || "es");
+  const [selected, setSelected] = useState(i18n.language || "en");
   const ref = useRef(null);
 
   const toggleMenu = () => setOpen((prev) => !prev);
@@ -32,7 +32,7 @@ const LanguageSelector = () => {
     setOpen(false);
   };
 
-  // Cerrar menú si se hace clic fuera
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) {

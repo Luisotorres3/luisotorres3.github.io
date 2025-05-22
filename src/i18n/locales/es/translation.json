@@ -6,6 +6,10 @@
   "projects.back": "← Volver",
   "projects.demo": "Ver en GitHub",
 
+  "loader": {
+    "loading": "Cargando tu universo..."
+  },
+
   "sections": {
     "about": "Sobre mí",
     "projects": "Proyectos",

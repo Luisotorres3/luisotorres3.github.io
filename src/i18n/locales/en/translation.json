@@ -6,6 +6,10 @@
   "projects.back": "← Back",
   "projects.demo": "View on GitHub",
 
+  "loader": {
+    "loading": "Loading your universe..."
+  },
+
   "sections": {
     "about": "About Me",
     "projects": "Projects",

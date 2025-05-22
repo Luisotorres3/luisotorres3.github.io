@@ -1,9 +1,11 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Loader = () => {
   const trailControls = useAnimation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     trailControls.start({
@@ -31,7 +33,7 @@ const Loader = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        Cargando tu universo...
+        {t("loader.loading")}
       </motion.p>
 
       {/* Estrella fugaz orbitando con estela dinámica */}

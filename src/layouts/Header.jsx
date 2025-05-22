@@ -4,6 +4,7 @@ import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import ScrollLink from "../components/ScrollLink";
 import LanguageSelector from "../components/LanguageSelector";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +17,18 @@ const Header = () => {
     setTheme(savedTheme);
   }, []);
 
+  // Prevenir scroll cuando el menú está abierto
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOpen]);
+
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("theme", newTheme);
@@ -26,12 +39,13 @@ const Header = () => {
   const sections = ["about", "experience", "projects", "contact"];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-xs z-50 shadow-lg">
-      <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+    <header className="fixed top-0 left-0 right-0 w-full bg-background/95 md:bg-background/80 backdrop-blur-md z-50 shadow-lg">
+      <div className="flex justify-between items-center px-4 md:px-6 py-4 max-w-7xl mx-auto">
         {/* Logo / nombre */}
         <ScrollLink
           href="#hero"
-          className="text-primary text-2xl font-bold cursor-pointer hover:glow"
+          className="text-primary text-xl md:text-2xl font-bold cursor-pointer hover:glow"
+          onClick={() => setMenuOpen(false)}
         >
           Luis Soto
         </ScrollLink>
@@ -43,6 +57,7 @@ const Header = () => {
               key={section}
               href={`#${section}`}
               className="relative py-1 transition-all duration-300 group transform hover:scale-110 hover:glow"
+              onClick={() => setMenuOpen(false)}
             >
               {t(`sections.${section}`)}
               <span className="absolute left-0 bottom-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
@@ -63,17 +78,18 @@ const Header = () => {
         </nav>
 
         {/* Botón menú móvil */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSelector />
           <button
             onClick={toggleTheme}
-            className="text-primary text-2xl"
+            className="text-primary text-xl"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <FiSun /> : <FiMoon />}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-primary text-2xl focus:outline-none"
+            className="text-primary text-xl focus:outline-none z-50 relative"
           >
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
@@ -81,24 +97,63 @@ const Header = () => {
       </div>
 
       {/* Menú móvil */}
-      {menuOpen && (
-        <nav className="md:hidden bg-opacity-90 backdrop-blur-sm px-6 pb-4 pt-2 flex flex-col gap-4 text-primary text-center">
-          {sections.map((section) => (
-            <ScrollLink
-              key={section}
-              href={`#${section}`}
-              className="py-1 transition duration-300 hover:text-accent"
-              onClick={() => setMenuOpen(false)}
-            >
-              {t(`sections.${section}`)}
-            </ScrollLink>
-          ))}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-40"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setMenuOpen(false);
+              }
+            }}
+          >
+            {/* Fondo con efecto espacial */}
+            <div className="absolute inset-0 bg-background/98">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(var(--color-primary),0.15),transparent_50%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(var(--color-accent),0.15),transparent_30%)] animate-pulse-slow" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(var(--color-accent),0.1),transparent_30%)] animate-pulse-slow" />
+              <div className="absolute inset-0 backdrop-blur-md" />
+            </div>
 
-          <div className="self-center mt-2">
-            <LanguageSelector />
-          </div>
-        </nav>
-      )}
+            <motion.nav
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              className="relative h-[100dvh] flex flex-col items-center justify-center gap-12 text-primary text-center px-6 bg-background/98 backdrop-blur-md z-40"
+            >
+              {sections.map((section, index) => (
+                <motion.div
+                  key={section}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.2 }}
+                  className="w-full"
+                >
+                  <ScrollLink
+                    href={`#${section}`}
+                    className="relative text-3xl font-bold py-3 px-6 transition duration-300 hover:text-accent inline-block group w-full"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span className="relative z-10">
+                      {t(`sections.${section}`)}
+                    </span>
+                    <motion.div
+                      className="absolute inset-0 bg-white/5 rounded-lg -z-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </ScrollLink>
+                </motion.div>
+              ))}
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

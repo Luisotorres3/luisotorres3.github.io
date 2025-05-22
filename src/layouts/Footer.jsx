@@ -1,5 +1,5 @@
 import React from "react";
-import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiFileText } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import RocketLink from "../components/RocketLink";
 import SimpleLink from "../components/SimpleLink";
@@ -16,9 +16,9 @@ const socialLinks = [
     icon: <FiLinkedin />,
   },
   {
-    name: "Twitter",
-    url: "https://twitter.com/luisotorres3",
-    icon: <FiTwitter />,
+    name: "CV",
+    url: "/portfolio_luis/Luis_Soto_Torres_CV_English.pdf",
+    icon: <FiFileText />,
   },
   {
     name: "Email",

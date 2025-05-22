@@ -6,7 +6,7 @@ const ScrollTransition = ({ isVisible, onAnimationComplete, direction }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 z-50 pointer-events-none"
+          className="fixed inset-0 z-[100] pointer-events-none bg-background/30 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -21,16 +21,16 @@ const ScrollTransition = ({ isVisible, onAnimationComplete, direction }) => {
             }}
             initial={{ scale: 0.5, y: direction === "up" ? 100 : -100 }}
             animate={{
-              scale: [0.5, 1, 1, 0.5],
-              y: direction === "up" ? [100, 0, 0, -100] : [-100, 0, 0, 100],
+              scale: [0.5, 1.2, 1.2, 0.5],
+              y: direction === "up" ? [100, 0, 0, -200] : [-100, 0, 0, 200],
               rotate: direction === "up" ? [-45, 0, 0, 45] : [45, 0, 0, -45],
             }}
             transition={{
-              duration: 0.8,
+              duration: 1,
               times: [0, 0.3, 0.7, 1],
             }}
           >
-            <span className="text-4xl">🚀</span>
+            <span className="text-6xl">🚀</span>
             {/* Estela del cohete */}
             <motion.div
               className="absolute"
@@ -38,20 +38,44 @@ const ScrollTransition = ({ isVisible, onAnimationComplete, direction }) => {
                 [direction === "up" ? "bottom" : "top"]: "100%",
                 left: "50%",
                 transform: "translateX(-50%)",
+                width: "4px",
+                height: "100px",
+                background:
+                  "linear-gradient(to bottom, rgba(var(--color-accent), 0.8), transparent)",
+                borderRadius: "4px",
               }}
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scaleY: 0 }}
+              animate={{
+                opacity: [0, 1, 0],
+                scaleY: [0.5, 2, 0.5],
+              }}
+              transition={{
+                duration: 1,
+                repeat: 1,
+                repeatType: "reverse",
+              }}
+            />
+            {/* Partículas de estela */}
+            <motion.div
+              className="absolute"
+              style={{
+                [direction === "up" ? "bottom" : "top"]: "120%",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+              initial={{ opacity: 0 }}
               animate={{
                 opacity: [0, 1, 0],
                 scale: [0.5, 1.5, 0.5],
-                y: direction === "up" ? [0, 20, 40] : [0, -20, -40],
+                y: direction === "up" ? [0, 30, 60] : [0, -30, -60],
               }}
               transition={{
-                duration: 0.8,
+                duration: 1,
                 repeat: 1,
                 repeatType: "reverse",
               }}
             >
-              <span className="text-2xl">✨</span>
+              <span className="text-4xl">✨</span>
             </motion.div>
           </motion.div>
         </motion.div>
