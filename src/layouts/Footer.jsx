@@ -1,6 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+import RocketLink from "../components/RocketLink";
+import SimpleLink from "../components/SimpleLink";
 
 const socialLinks = [
   {
@@ -26,6 +28,8 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative w-full py-12 px-6 overflow-hidden">
       {/* Decorative background */}
@@ -36,29 +40,33 @@ const Footer = () => {
         {/* Social links */}
         <div className="flex justify-center gap-6 mb-8">
           {socialLinks.map((link) => (
-            <motion.a
+            <RocketLink
               key={link.name}
               href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-muted hover:text-accent text-xl transition-colors duration-300"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              title={link.name}
             >
               {link.icon}
-            </motion.a>
+            </RocketLink>
           ))}
+        </div>
+
+        {/* Portfolio versions */}
+        <div className="flex justify-center gap-4 mb-8">
+          <SimpleLink
+            href="https://luisotorres3.github.io/"
+            className="text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2"
+          >
+            <span className="text-sm">{t("footer.portfolio_v1")}</span>
+            <span className="text-lg">🌠</span>
+          </SimpleLink>
         </div>
 
         {/* Copyright */}
         <div className="text-center text-muted text-sm">
           <p className="mb-2">
-            © {new Date().getFullYear()} Luis Soto Torres. All rights reserved.
+            © {new Date().getFullYear()} Luis Soto Torres. {t("footer.rights")}
           </p>
-          <p className="text-xs">
-            🚀 Built with React, Tailwind CSS & Framer Motion
-          </p>
+          <p className="text-xs">🚀 {t("footer.built_with")}</p>
         </div>
       </div>
     </footer>

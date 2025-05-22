@@ -132,6 +132,12 @@
       "email": "tu@correo.com",
       "message": "Escribe tu mensaje aquí..."
     }
+  },
+
+  "footer": {
+    "portfolio_v1": "Ver Portfolio v1",
+    "rights": "Todos los derechos reservados.",
+    "built_with": "Construido con React, Tailwind CSS y Framer Motion"
   }
 }
 

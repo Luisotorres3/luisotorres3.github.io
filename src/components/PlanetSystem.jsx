@@ -85,7 +85,7 @@ const PlanetSystem = () => {
 
       {/* Estrella central */}
       <div
-        className="z-10 w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-background text-base md:text-xl font-bold shadow-2xl border border-accent text-white"
+        className="z-10 w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-background text-base md:text-xl font-bold shadow-2xl border border-accent text-white text-center p-2"
         style={{
           background: `radial-gradient(circle at 30% 30%, var(--color-primary), #111)`,
         }}

@@ -133,5 +133,11 @@
       "email": "votre@email.com",
       "message": "Écrivez votre message ici..."
     }
+  },
+
+  "footer": {
+    "portfolio_v1": "Voir Portfolio v1",
+    "rights": "Tous droits réservés.",
+    "built_with": "Construit avec React, Tailwind CSS et Framer Motion"
   }
 }
