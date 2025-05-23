@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import projectsData from "../../data/projects.json";
 import {
   SiKotlin,
   SiFirebase,
@@ -28,7 +29,7 @@ const techIcons = {
 const Projects = () => {
   const [selected, setSelected] = useState(null);
   const { t } = useTranslation();
-  const projects = t("projects.list", { returnObjects: true });
+  const projects = projectsData;
 
   const handleSelect = (project) => {
     setSelected(project);
@@ -51,7 +52,7 @@ const Projects = () => {
       <AnimatePresence mode="wait">
         {selected ? (
           <motion.div
-            key={selected.name}
+            key={t(selected.nameKey)}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
@@ -59,9 +60,9 @@ const Projects = () => {
             className="max-w-4xl mx-auto bg-white/5 border border-accent rounded-xl p-6 backdrop-blur-md shadow-md"
           >
             <h3 className="text-3xl font-bold text-accent mb-2">
-              {selected.name}
+              {t(selected.nameKey)}
             </h3>
-            <p className="text-muted mb-4">{selected.description}</p>
+            <p className="text-muted mb-4">{t(selected.descriptionKey)}</p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {selected.techs.map((tech, i) => (
@@ -78,9 +79,10 @@ const Projects = () => {
             <div className="aspect-video w-full mb-6">
               <iframe
                 src={selected.video}
-                title={`${selected.name} demo`}
+                title={`${t(selected.nameKey)} demo`}
                 allowFullScreen
                 className="w-full h-full rounded-md border border-white/10"
+                loading="lazy"
               />
             </div>
 
@@ -116,7 +118,7 @@ const Projects = () => {
               >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-accent text-base font-bold uppercase tracking-widest">
-                    {proj.name}
+                    {t(proj.nameKey)}
                   </h3>
                   <a
                     href={proj.url}
@@ -129,7 +131,7 @@ const Projects = () => {
                   </a>
                 </div>
 
-                <p className="text-xs mb-3">{proj.description}</p>
+                <p className="text-xs mb-3">{t(proj.descriptionKey)}</p>
 
                 {/* Tecnologías */}
                 <div className="flex flex-wrap gap-2">

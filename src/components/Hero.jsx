@@ -1,7 +1,6 @@
 import React from "react";
-import data from "../data/about.json";
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
+import aboutData from "../../data/about.json";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -22,7 +21,7 @@ const Hero = () => {
       <br />
 
       <p className="text-lg md:text-xl text-muted max-w-2xl">
-        {t("about.description")}
+        {t(aboutData.descriptionKey)}
       </p>
     </section>
   );

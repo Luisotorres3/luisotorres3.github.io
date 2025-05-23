@@ -8,9 +8,15 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Simulate a loading period with a fixed duration.
+    // This ensures the loader is visible for at least 1000ms,
+    // which can be for aesthetic reasons or as a placeholder for future
+    // asynchronous data fetching logic.
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
+    // Cleanup function: Clears the timeout if the component unmounts
+    // before the timeout completes, preventing potential memory leaks or errors.
     return () => clearTimeout(timer);
   }, []);
 
