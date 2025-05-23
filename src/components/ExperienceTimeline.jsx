@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import aboutData from "../../data/about.json";
+import aboutData from "../data/about.json";
 
 // Framer Motion variant for individual timeline items.
 // Defines animation states for when an item is 'hidden' (initial state, off-screen)
@@ -10,7 +10,8 @@ import aboutData from "../../data/about.json";
 // where each item's animation is delayed by `i * 0.2` seconds.
 const timelineVariant = {
   hidden: { opacity: 0, y: 50 }, // Initial state: transparent and slightly below its final position.
-  visible: (i) => ({ // Target state: fully opaque and at its final position.
+  visible: (i) => ({
+    // Target state: fully opaque and at its final position.
     opacity: 1,
     y: 0,
     transition: { delay: i * 0.2 }, // Staggered delay based on item index.
@@ -168,28 +169,33 @@ const ExperienceTimeline = () => {
       {/* Adds a subtle visual enhancement with particles that float up and down. */}
       {/* `pointer-events-none` ensures these particles don't interfere with user interactions. */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => ( // Creates 20 particle elements.
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-accent/30 rounded-full" // Small, semi-transparent circles.
-            style={{
-              // Random initial horizontal and vertical positioning.
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              // Animation: moves vertically and fades in/out.
-              y: [0, -30, 0], // Vertical movement path.
-              opacity: [0, 1, 0], // Opacity change for fade effect.
-            }}
-            transition={{
-              // Animation timing:
-              duration: 3 + Math.random() * 2, // Random duration for variation.
-              repeat: Infinity, // Loops indefinitely.
-              delay: Math.random() * 2, // Random delay for staggered start.
-            }}
-          />
-        ))}
+        {[...Array(20)].map(
+          (
+            _,
+            i // Creates 20 particle elements.
+          ) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-accent/30 rounded-full" // Small, semi-transparent circles.
+              style={{
+                // Random initial horizontal and vertical positioning.
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                // Animation: moves vertically and fades in/out.
+                y: [0, -30, 0], // Vertical movement path.
+                opacity: [0, 1, 0], // Opacity change for fade effect.
+              }}
+              transition={{
+                // Animation timing:
+                duration: 3 + Math.random() * 2, // Random duration for variation.
+                repeat: Infinity, // Loops indefinitely.
+                delay: Math.random() * 2, // Random delay for staggered start.
+              }}
+            />
+          )
+        )}
       </div>
     </section>
   );

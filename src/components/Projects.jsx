@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import projectsData from "../../data/projects.json";
+import projectsData from "../data/projects.json";
 import {
   SiKotlin,
   SiFirebase,

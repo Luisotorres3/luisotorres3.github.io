@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import aboutData from "../../data/about.json";
+import aboutData from "../data/about.json";
 
 const AboutMe = () => {
   const { t } = useTranslation();
@@ -54,7 +54,7 @@ const AboutMe = () => {
 
           <div className="mt-6">
             <h4 className="font-semibold text-accent mb-1">
-              🗣️ {t("about.languages.title", "Idiomas conocidos")}: 
+              🗣️ {t("about.languages.title", "Idiomas conocidos")}:
             </h4>
             <ul className="list-disc ml-5 text-muted grid grid-cols-1 md:grid-cols-2 gap-y-1">
               {languages.map((lang, idx) => (
