@@ -10,8 +10,11 @@ const randomColor = (idx) => {
 
 const PlanetSystem = () => {
   const { t } = useTranslation();
-  const skills = t("about.skills", { returnObjects: true });
-  const skillsToShow = skills?.slice(0, 12) || [];
+  const skills = t("about.skills", { returnObjects: true }) || [];
+  // Asegurarnos de que skills es un array antes de hacer slice
+  const skillsToShow = Array.isArray(skills)
+    ? skills.slice(0, 12)
+    : Object.values(skills || {}).slice(0, 12);
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const baseRadius = isMobile ? 80 : 160;

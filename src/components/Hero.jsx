@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import aboutData from "../../data/about.json";
+import aboutData from "../data/about.json";
 
 const Hero = () => {
   const { t } = useTranslation();
