@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
+import {
+  FiMenu,
+  FiX,
+  FiMoon,
+  FiSun,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiFileText,
+} from "react-icons/fi";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import ScrollLink from "../components/ScrollRocketLink";
@@ -10,6 +19,29 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
   const { t } = useTranslation();
+
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/Luisotorres3",
+      icon: <FiGithub className="text-2xl" />,
+    },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/luisotorres3",
+      icon: <FiLinkedin className="text-2xl" />,
+    },
+    {
+      name: "CV",
+      url: "/portfolio_luis/Luis_Soto_Torres_CV_English.pdf",
+      icon: <FiFileText className="text-2xl" />,
+    },
+    {
+      name: "Email",
+      url: "mailto:luis.soto.torres3@gmail.com",
+      icon: <FiMail className="text-2xl" />,
+    },
+  ];
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -142,6 +174,34 @@ const Header = () => {
                   </ScrollLink>
                 </motion.div>
               ))}
+
+              {/* Social Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: sections.length * 0.1 + 0.3 }}
+                className="flex gap-6 mt-4"
+              >
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-accent transition-all duration-300 relative group"
+                    whileHover={{ scale: 1.1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    {social.icon}
+                    <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {social.name}
+                    </span>
+                    <div className="absolute inset-0 bg-accent/10 rounded-full scale-0 group-hover:scale-150 transition-transform duration-300 -z-10" />
+                  </motion.a>
+                ))}
+              </motion.div>
             </motion.nav>
           </motion.div>
         )}
