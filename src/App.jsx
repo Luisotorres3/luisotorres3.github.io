@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import StarryBackground from "./components/StarryBackground";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,10 @@ const App = () => {
           <Loader />
         </div>
       ) : (
-        <Home />
+        <>
+          <Home />
+          <ScrollToTop />
+        </>
       )}
     </div>
   );
