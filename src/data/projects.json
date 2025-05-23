@@ -1,55 +1,55 @@
 [
   {
-    "name": "MoneyScheduler",
-    "description": "Mobile App to manage your incomes",
+    "nameKey": "projects.list.moneyScheduler.name",
+    "descriptionKey": "projects.list.moneyScheduler.description",
     "url": "https://github.com/Luisotorres3/MoneyScheduler",
     "image": "/images/moneyscheduler.png",
     "techs": ["Kotlin", "Firebase"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "Cartelera",
-    "description": "Cartelera online para cine con información dinámica",
+    "nameKey": "projects.list.cartelera.name",
+    "descriptionKey": "projects.list.cartelera.description",
     "url": "https://github.com/Luisotorres3/Cartelera",
     "image": "/images/cartelera.png",
     "techs": ["Kotlin", "API REST"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "Panaderia",
-    "description": "Mobile App to manage a Bakery shop",
+    "nameKey": "projects.list.panaderia.name",
+    "descriptionKey": "projects.list.panaderia.description",
     "url": "https://github.com/Luisotorres3/Panaderia",
     "image": "/images/panaderia.png",
     "techs": ["Kotlin"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "Gonorte",
-    "description": "Sitio web dinámico para eventos deportivos y gestión de caballos.",
+    "nameKey": "projects.list.gonorte.name",
+    "descriptionKey": "projects.list.gonorte.description",
     "url": "https://github.com/Luisotorres3/Gonorte",
     "image": "/images/gonorte.png",
     "techs": ["JavaScript", "Tailwind", "React"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "Gestion-del-Olivar",
-    "description": "TFG sobre gestión agrícola del olivar, Universidad de Granada.",
+    "nameKey": "projects.list.gestionDelOlivar.name",
+    "descriptionKey": "projects.list.gestionDelOlivar.description",
     "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
     "image": "/images/olivar.png",
     "techs": ["React", "Firebase", "JS"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "portfolio_luis",
-    "description": "Mi portfolio personal con temática espacial.",
+    "nameKey": "projects.list.portfolioLuis.name",
+    "descriptionKey": "projects.list.portfolioLuis.description",
     "url": "https://github.com/Luisotorres3/portfolio_luis",
     "image": "/images/portfolio.png",
     "techs": ["React", "Tailwind", "Framer Motion"],
     "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   {
-    "name": "Proyecto-Informatica-Grafica",
-    "description": "Proyecto sobre OpenGL y C++ para la asignatura de Informática Gráfica.",
+    "nameKey": "projects.list.proyectoInformaticaGrafica.name",
+    "descriptionKey": "projects.list.proyectoInformaticaGrafica.description",
     "url": "https://github.com/Luisotorres3/Proyecto-Informatica-Grafica",
     "image": "/images/grafica.png",
     "techs": ["C++", "OpenGL"],

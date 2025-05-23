@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import aboutData from "../../data/about.json";
 
 const AboutMe = () => {
   const { t } = useTranslation();
 
-  const hobbies = t("about.hobbies", { returnObjects: true });
-  const languages = t("about.languages", { returnObjects: true });
+  const hobbies = aboutData.hobbies;
+  const languages = aboutData.languages;
 
   return (
     <div
@@ -31,34 +32,34 @@ const AboutMe = () => {
         {/* Consola de datos */}
         <div className="w-full text-left">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary mb-2 tracking-wide uppercase border-b-2 border-accent inline-block pb-1">
-            {t("about.name")}
+            {t(aboutData.nameKey)}
           </h2>
           <h3 className="text-xl md:text-2xl text-muted mb-4 italic">
-            {t("about.title")}
+            {t(aboutData.titleKey)}
           </h3>
           <p className="text-base text-muted mb-6 leading-relaxed bg-white/5 p-4 rounded-md shadow-md backdrop-blur-md border border-white/10">
-            {t("about.description")}
+            {t(aboutData.descriptionKey)}
           </p>
 
           <div>
             <h4 className="font-semibold text-accent mb-1 mt-6">
-              👽 {t("aboutSection.hobbies", "Intereses galácticos")}:
+              👽 {t("about.mySkills", "Intereses galácticos")}:
             </h4>
             <ul className="list-disc ml-5 text-muted grid grid-cols-2 md:grid-cols-3 gap-y-1">
               {hobbies.map((hobby, idx) => (
-                <li key={idx}>{hobby}</li>
+                <li key={idx}>{t(hobby.hobbyKey)}</li>
               ))}
             </ul>
           </div>
 
           <div className="mt-6">
             <h4 className="font-semibold text-accent mb-1">
-              🗣️ {t("aboutSection.languages", "Idiomas conocidos")}:
+              🗣️ {t("about.languages.title", "Idiomas conocidos")}: 
             </h4>
             <ul className="list-disc ml-5 text-muted grid grid-cols-1 md:grid-cols-2 gap-y-1">
               {languages.map((lang, idx) => (
                 <li key={idx}>
-                  {lang.name} — {lang.level}
+                  {t(lang.nameKey)} — {lang.level}
                 </li>
               ))}
             </ul>
