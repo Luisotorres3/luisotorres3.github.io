@@ -45,7 +45,7 @@
       },
       "proyectoInformaticaGrafica": {
         "name": "Proyecto-Informatica-Grafica",
-        "description": "Proyecto sobre OpenGL y C++ para la asignatura de Informática Gráfica."
+        "description": "Project about OpenGL and C++ for the Computer Graphics course."
       }
     }
   },
@@ -86,20 +86,37 @@
       "appDevelopment": "App Development"
     },
     "languages": {
-      "spanish": { "name": "Spanish" },
-      "english": { "name": "English" },
-      "french": { "name": "French" },
-      "finnish": { "name": "Finnish" }
+      "title": "Known Languages",
+      "spanish": { "name": "Spanish", "level": "Native" },
+      "english": { "name": "English", "level": "Advanced (FCE)" },
+      "french": { "name": "French", "level": "Basic (B2)" },
+      "finnish": { "name": "Finnish", "level": "Basic (A1)" }
     },
     "experience": {
       "amadeus": {
         "role": "C++ Developer",
+        "location": "Nice, France",
+        "period": "Sep 2023 – Present",
         "description": "Development of auxiliary services for airlines like Southwest Airlines, Air France, and more using C++ in Agile environments."
       },
       "nttData": {
         "role": "Junior Developer",
+        "location": "Granada, Spain (Remote)",
+        "period": "Mar 2023 – Sep 2023",
         "description": "Internal project for time tracking using Power BI, JSON, Java, and Node-RED."
       }
+    },
+    "competencies": {
+      "title": "Professional Competencies",
+      "problemSolving": "Problem Solving",
+      "teamwork": "Teamwork",
+      "analyticalThinking": "Analytical Thinking",
+      "communication": "Technical Communication",
+      "projectManagement": "Project Management",
+      "selfLearning": "Self-Learning",
+      "adaptability": "Adaptability",
+      "technicalLeadership": "Technical Leadership",
+      "innovation": "Innovation & Creativity"
     }
   },
 

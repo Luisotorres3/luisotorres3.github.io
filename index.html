@@ -8,7 +8,41 @@
       content="Portfolio de Luis Soto Torres - Ingeniero Informático"
     />
     <link rel="icon" type="image/png" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Luis Soto | Portfolio</title>
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .animate-twinkle {
+        animation: twinkle 2s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-black text-white">
     <div id="root"></div>

@@ -3,27 +3,32 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Orbitron", sans-serif;
+}
+
 @theme {
-  --color-background: #000000;
-  --color-text: #ffffff;
-  --color-primary: #c770f0;
-  --color-primary-10: rgba(199, 112, 240, 0.1);
-  --color-accent: #ff00ff;
-  --color-surface: #1a1a1a;
-  --color-muted: #cccccc;
-  --bg-rgb: 0, 0, 0;
+  --color-background-rgb: 0, 0, 0;
+  --color-text-rgb: 255, 255, 255;
+  --color-primary-rgb: 199, 112, 240;
+  --color-accent-rgb: 255, 0, 255;
+  --color-surface-rgb: 26, 26, 26;
+  --color-muted-rgb: 204, 204, 204;
+
+  /* Legacy variables for direct use, if needed */
+  --color-primary: rgb(var(--color-primary-rgb));
+  --color-accent: rgb(var(--color-accent-rgb));
+  --color-muted: rgb(var(--color-muted-rgb));
 }
 
 @layer base {
   [theme="light"] {
-    --color-background: #000000;
-    --color-text: #ffffff;
-    --color-primary: #00ffff;
-    --color-primary-10: rgba(0, 255, 255, 0.1);
-    --color-accent: #64fcfc;
-    --color-surface: #1a1a1a;
-    --color-muted: #cccccc;
-    --bg-rgb: 0, 0, 0;
+    --color-background-rgb: 0, 0, 0;
+    --color-text-rgb: 255, 255, 255;
+    --color-primary-rgb: 0, 255, 255;
+    --color-accent-rgb: 100, 252, 252;
+    --color-surface-rgb: 26, 26, 26;
+    --color-muted-rgb: 204, 204, 204;
   }
 }
 

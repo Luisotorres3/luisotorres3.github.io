@@ -31,24 +31,24 @@
     { "hobbyKey": "about.hobbies.appDevelopment" }
   ],
   "languages": [
-    { "nameKey": "about.languages.spanish.name", "level": "Nativo" },
-    { "nameKey": "about.languages.english.name", "level": "Avanzado (FCE)" },
-    { "nameKey": "about.languages.french.name", "level": "Básico (B2)" },
-    { "nameKey": "about.languages.finnish.name", "level": "Básico (A1)" }
+    { "nameKey": "about.languages.spanish.name", "levelKey": "about.languages.spanish.level" },
+    { "nameKey": "about.languages.english.name", "levelKey": "about.languages.english.level" },
+    { "nameKey": "about.languages.french.name", "levelKey": "about.languages.french.level" },
+    { "nameKey": "about.languages.finnish.name", "levelKey": "about.languages.finnish.level" }
   ],
   "experience": [
     {
       "roleKey": "about.experience.amadeus.role",
       "company": "Amadeus",
-      "location": "Nice, Francia",
-      "period": "Sep 2023 – Actualidad",
+      "locationKey": "about.experience.amadeus.location",
+      "periodKey": "about.experience.amadeus.period",
       "descriptionKey": "about.experience.amadeus.description"
     },
     {
       "roleKey": "about.experience.nttData.role",
       "company": "NTT Data",
-      "location": "Granada, España (Remoto)",
-      "period": "Mar 2023 – Sep 2023",
+      "locationKey": "about.experience.nttData.location",
+      "periodKey": "about.experience.nttData.period",
       "descriptionKey": "about.experience.nttData.description"
     }
   ]

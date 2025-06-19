@@ -19,56 +19,36 @@
   },
 
   "projects": {
-    "list": [
-      {
+    "list": {
+      "moneyScheduler": {
         "name": "MoneyScheduler",
-        "description": "Application mobile pour gérer vos revenus et dépenses",
-        "url": "https://github.com/Luisotorres3/MoneyScheduler",
-        "image": "/images/moneyscheduler.png",
-        "techs": ["Kotlin", "Firebase"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Application mobile pour gérer vos revenus et dépenses"
       },
-      {
+      "cartelera": {
         "name": "Cartelera",
-        "description": "Panneau d'affichage de cinéma en ligne avec informations dynamiques",
-        "url": "https://github.com/Luisotorres3/Cartelera",
-        "image": "/images/cartelera.png",
-        "techs": ["Kotlin", "API REST"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Panneau d'affichage de cinéma en ligne avec informations dynamiques"
       },
-      {
+      "panaderia": {
         "name": "Panaderia",
-        "description": "Application mobile pour gérer une boulangerie",
-        "url": "https://github.com/Luisotorres3/Panaderia",
-        "image": "/images/panaderia.png",
-        "techs": ["Kotlin"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Application mobile pour gérer une boulangerie"
       },
-      {
+      "gonorte": {
         "name": "Gonorte",
-        "description": "Site web dynamique pour événements sportifs et gestion équine",
-        "url": "https://github.com/Luisotorres3/Gonorte",
-        "image": "/images/gonorte.png",
-        "techs": ["JavaScript", "Tailwind", "React"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Site web dynamique pour événements sportifs et gestion équine"
       },
-      {
+      "gestionDelOlivar": {
         "name": "Gestion de l'Oliveraie",
-        "description": "Projet de fin d'études sur la gestion agricole des oliveraies, Université de Grenade",
-        "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
-        "image": "/images/olivar.png",
-        "techs": ["React", "Firebase", "JS"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Projet de fin d'études sur la gestion agricole des oliveraies, Université de Grenade"
       },
-      {
+      "portfolioLuis": {
         "name": "Portfolio Luis",
-        "description": "Mon portfolio personnel avec thème spatial",
-        "url": "https://github.com/Luisotorres3/portfolio_luis",
-        "image": "/images/portfolio.png",
-        "techs": ["React", "Tailwind", "Framer Motion"],
-        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        "description": "Mon portfolio personnel avec thème spatial"
+      },
+      "proyectoInformaticaGrafica": {
+        "name": "Proyecto-Informatica-Grafica",
+        "description": "Projet sur OpenGL et C++ pour le cours d'informatique graphique."
       }
-    ]
+    }
   },
 
   "about": {
@@ -98,28 +78,40 @@
       "Animation 3D",
       "Développement d'applications"
     ],
-    "languages": [
-      { "name": "Espagnol", "level": "Natif" },
-      { "name": "Anglais", "level": "Avancé (FCE)" },
-      { "name": "Français", "level": "Basique (B2)" },
-      { "name": "Finnois", "level": "Basique (A1)" }
-    ],
-    "experience": [
-      {
-        "role": "Développeur C++",
-        "company": "Amadeus",
+    "languages": {
+      "title": "Langues connues",
+      "spanish": { "name": "Espagnol", "level": "Natif" },
+      "english": { "name": "Anglais", "level": "Avancé (FCE)" },
+      "french": { "name": "Français", "level": "Basique (B2)" },
+      "finnish": { "name": "Finnois", "level": "Basique (A1)" }
+    },
+    "experience": {
+      "amadeus": {
         "location": "Nice, France",
-        "period": "Sep 2023 – Actuel",
-        "description": "Développement de services auxiliaires pour des compagnies aériennes comme Southwest Airlines, Air France et d'autres, en C++ dans des environnements Agile."
+        "period": "Sep 2023 – Actuel"
       },
-      {
-        "role": "Développeur Junior",
-        "company": "NTT Data",
+      "nttData": {
         "location": "Grenade, Espagne (Télétravail)",
-        "period": "Mar 2023 – Sep 2023",
-        "description": "Projet interne de suivi horaire avec Power BI, JSON, Java et Node-RED."
+        "period": "Mar 2023 – Sep 2023"
       }
-    ]
+    },
+    "competencies": {
+      "title": "Compétences Professionnelles",
+      "problemSolving": "Résolution de Problèmes",
+      "teamwork": "Travail d'Équipe",
+      "analyticalThinking": "Pensée Analytique",
+      "communication": "Communication Technique",
+      "projectManagement": "Gestion de Projets",
+      "selfLearning": "Auto-apprentissage",
+      "adaptability": "Adaptabilité",
+      "technicalLeadership": "Leadership Technique",
+      "innovation": "Innovation et Créativité"
+    },
+    "me": {
+      "name": "Luis Soto Torres",
+      "title": "Ingénieur Informatique & Développeur C++",
+      "description": "Développeur avec expérience en C++, Java, intelligence artificielle et développement web. Passionné par la technologie spatiale, les interfaces interactives et l'apprentissage continu."
+    }
   },
 
   "contact": {

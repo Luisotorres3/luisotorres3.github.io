@@ -92,7 +92,6 @@ const ExperienceTimeline = () => {
                 className="bg-black/40 border border-accent/20 p-6 rounded-xl shadow-xl backdrop-blur-sm relative overflow-hidden group hover:border-accent/40 transition-all duration-500"
                 whileHover={{
                   scale: 1.02,
-                  borderColor: "rgba(var(--color-accent), 0.4)",
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
@@ -114,7 +113,7 @@ const ExperienceTimeline = () => {
                       </p>
                     </div>
                     <span className="text-xs text-muted bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20 font-mono">
-                      {exp.period}
+                      {t(exp.periodKey)}
                     </span>
                   </div>
 
@@ -122,7 +121,7 @@ const ExperienceTimeline = () => {
                     <p className="leading-relaxed">{t(exp.descriptionKey)}</p>
                     <div className="mt-3 flex items-center gap-2 text-xs text-accent/80">
                       <span className="animate-pulse-slow">📍</span>
-                      {exp.location}
+                      {t(exp.locationKey)}
                     </div>
                   </div>
                 </div>
