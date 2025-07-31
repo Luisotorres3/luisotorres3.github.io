@@ -1,31 +1,8 @@
 import React from "react";
-import { FiGithub, FiLinkedin, FiMail, FiFileText } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import RocketLink from "../components/RocketLink";
 import SimpleLink from "../components/SimpleLink";
-
-const socialLinks = [
-  {
-    name: "GitHub",
-    url: "https://github.com/Luisotorres3",
-    icon: <FiGithub />,
-  },
-  {
-    name: "LinkedIn",
-    url: "https://linkedin.com/in/luisotorres3",
-    icon: <FiLinkedin />,
-  },
-  {
-    name: "CV",
-    url: "/CV_Luis_Soto_Torres_English.pdf",
-    icon: <FiFileText />,
-  },
-  {
-    name: "Email",
-    url: "mailto:luis.soto.torres3@gmail.com",
-    icon: <FiMail />,
-  },
-];
+import socialLinks from "../data/socialLinks";
 
 const Footer = () => {
   const { t } = useTranslation();

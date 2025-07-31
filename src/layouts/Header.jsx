@@ -1,47 +1,16 @@
 import React, { useState, useEffect } from "react";
-import {
-  FiMenu,
-  FiX,
-  FiMoon,
-  FiSun,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-  FiFileText,
-} from "react-icons/fi";
+import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import ScrollLink from "../components/ScrollRocketLink";
 import LanguageSelector from "../components/LanguageSelector";
 import { motion, AnimatePresence } from "framer-motion";
+import socialLinks from "../data/socialLinks";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
   const { t } = useTranslation();
-
-  const socialLinks = [
-    {
-      name: "GitHub",
-      url: "https://github.com/Luisotorres3",
-      icon: <FiGithub className="text-2xl" />,
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/luisotorres3",
-      icon: <FiLinkedin className="text-2xl" />,
-    },
-    {
-      name: "CV",
-      url: "/CV_Luis_Soto_Torres_English.pdf",
-      icon: <FiFileText className="text-2xl" />,
-    },
-    {
-      name: "Email",
-      url: "mailto:luis.soto.torres3@gmail.com",
-      icon: <FiMail className="text-2xl" />,
-    },
-  ];
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "dark";
