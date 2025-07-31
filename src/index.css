@@ -52,6 +52,10 @@ body {
   }
 
   .bg-background {
-    background-color: rgba(var(--bg-rgb), 0.9);
+    background-color: rgba(var(--color-background-rgb), 0.9);
+  }
+
+  .bg-background-mob {
+    background-color: rgba(var(--color-background-rgb), 1);
   }
 }

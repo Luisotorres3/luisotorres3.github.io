@@ -33,7 +33,7 @@ const Header = () => {
     },
     {
       name: "CV",
-      url: "/portfolio_luis/Luis_Soto_Torres_CV_English.pdf",
+      url: "/CV_Luis_Soto_Torres_English.pdf",
       icon: <FiFileText className="text-2xl" />,
     },
     {
@@ -148,7 +148,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="relative h-[100dvh] flex flex-col items-center justify-center gap-12 text-primary text-center px-6 bg-background/90 backdrop-blur-md z-40"
+              className="relative h-[100dvh] flex flex-col items-center justify-center gap-12 text-primary text-center px-6 bg-background-mob backdrop-blur-md z-40"
             >
               {sections.map((section, index) => (
                 <motion.div

@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       {/* Contenido principal */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-[0_0_20px_rgba(0,255,255,0.7)] text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-300 to-purple-500">
           {t("hero.title")}
         </h1>

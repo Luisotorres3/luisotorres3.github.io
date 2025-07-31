@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     name: "CV",
-    url: "/portfolio_luis/Luis_Soto_Torres_CV_English.pdf",
+    url: "/CV_Luis_Soto_Torres_English.pdf",
     icon: <FiFileText />,
   },
   {
@@ -49,7 +49,7 @@ const Footer = () => {
         {/* Portfolio versions */}
         <div className="flex justify-center gap-4 mb-8">
           <SimpleLink
-            href="https://luisotorres3.github.io/"
+            href="https://luisotorres3.github.io/portfolio_v1/"
             className="text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2"
           >
             <span className="text-sm">{t("footer.portfolio_v1")}</span>
