@@ -21,31 +21,43 @@
     "list": {
       "moneyScheduler": {
         "name": "MoneyScheduler",
-        "description": "Mobile App to manage your incomes and expenses"
+        "description": "Mobile app to track income, expenses, and budgeting habits.",
+        "details": "Android project built with Kotlin and Firebase for personal finance control. It includes transaction tracking, category-based organization, and a clean interface to better understand spending patterns and support day-to-day saving decisions."
       },
       "cartelera": {
         "name": "Cartelera",
-        "description": "Online movie billboard with dynamic information"
+        "description": "Online movie billboard with dynamic content.",
+        "details": "Kotlin Android app that consumes a REST API to display current movie listings and related details. The project focuses on external data integration, smooth screen navigation, and clear information layout for end users."
       },
       "panaderia": {
         "name": "Panaderia",
-        "description": "Mobile App to manage a Bakery shop"
+        "description": "Mobile app for daily bakery operations.",
+        "details": "Kotlin mobile project aimed at digitizing basic bakery workflows such as product organization and daily task handling. It was designed to practice app architecture and usability in a realistic small-business scenario."
       },
       "gonorte": {
         "name": "Gonorte",
-        "description": "Dynamic website for sports events and horse management"
+        "description": "Personal training website focused on biomechanics and online plans.",
+        "details": "React-based website to present training services, plans, testimonials, and contact channels for a personal training brand. It includes structured route-based pages and a conversion-oriented visual approach, prepared for GitHub Pages deployment."
       },
       "gestionDelOlivar": {
         "name": "Olive Grove Management",
-        "description": "Final degree project on olive grove agricultural management, University of Granada"
+        "description": "Final degree project for olive farm management and analytics.",
+        "details": "Web application developed as a final degree project at the University of Granada. It allows farm management, weather forecast consultation, image-based olive tree counting, and key metric visualization. It combines a React frontend with Firebase and cloud services."
       },
       "portfolioLuis": {
         "name": "Luis Portfolio",
-        "description": "My personal portfolio with space theme"
+        "description": "Personal portfolio with a space-inspired frontend design.",
+        "details": "First version of my personal portfolio, built with React and Tailwind. It showcases profile, skills, and projects with a strong visual identity, interactive sections, and a clear navigation flow for recruiters and collaborators."
       },
       "proyectoInformaticaGrafica": {
         "name": "Proyecto-Informatica-Grafica",
-        "description": "Project about OpenGL and C++ for the Computer Graphics course."
+        "description": "Academic computer graphics project with C++ and OpenGL.",
+        "details": "University project focused on 3D graphics fundamentals using C++ and OpenGL. It covers rendering, transformations, and scene composition to consolidate core computer graphics concepts and low-level visualization programming."
+      },
+      "jPerformanceLaunch": {
+        "name": "j-performance-launch",
+        "description": "Modern website for personalized training services.",
+        "details": "Web app built with React, TypeScript, and Tailwind for a personal trainer brand. It includes training plan pages, informational sections, contact flows, and reusable components. The project is documented and prepared for GitHub Pages deployment."
       }
     }
   },

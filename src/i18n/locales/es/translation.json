@@ -21,31 +21,43 @@
     "list": {
       "moneyScheduler": {
         "name": "MoneyScheduler",
-        "description": "Aplicación móvil para gestionar tus ingresos y gastos"
+        "description": "App móvil para controlar ingresos, gastos y hábitos financieros.",
+        "details": "Proyecto Android en Kotlin con Firebase orientado al control financiero personal. Incluye registro de movimientos, organización por categorías y una interfaz simple para visualizar mejor en qué se gasta el dinero y tomar decisiones de ahorro más rápidas."
       },
       "cartelera": {
         "name": "Cartelera",
-        "description": "Cartelera online para cine con información dinámica"
+        "description": "Cartelera online de cine con contenido dinámico.",
+        "details": "Aplicación Android en Kotlin que consume una API REST para mostrar películas en cartelera con información actualizada. El foco del proyecto fue integrar correctamente datos externos, mejorar la navegación entre pantallas y presentar la información de forma clara para el usuario final."
       },
       "panaderia": {
         "name": "Panaderia",
-        "description": "Aplicación móvil para gestionar una panadería"
+        "description": "Aplicación móvil para la gestión operativa de una panadería.",
+        "details": "Proyecto móvil en Kotlin enfocado en digitalizar tareas cotidianas de una panadería, como organización básica de productos y flujo de trabajo diario. El objetivo principal fue practicar arquitectura de app y experiencia de uso en un contexto real de pequeño negocio."
       },
       "gonorte": {
         "name": "Gonorte",
-        "description": "Sitio web dinámico para eventos deportivos y gestión de caballos"
+        "description": "Web de entrenamiento personal con enfoque en biomecánica y planes online.",
+        "details": "Sitio web en React para presentar servicios de entrenamiento, planes, testimonios y contacto de marca personal. Incluye rutas específicas, secciones de contenido estructurado y una propuesta visual orientada a conversión. Está preparado para despliegue en GitHub Pages."
       },
       "gestionDelOlivar": {
         "name": "Gestión del Olivar",
-        "description": "TFG sobre gestión agrícola del olivar, Universidad de Granada"
+        "description": "TFG para gestionar fincas y olivares con datos y analítica.",
+        "details": "Aplicación web desarrollada como TFG en la Universidad de Granada. Permite gestionar fincas, consultar pronóstico meteorológico, procesar imágenes para conteo de olivos y visualizar indicadores clave. Combina frontend en React con servicios en Firebase y funciones en la nube."
       },
       "portfolioLuis": {
         "name": "Portfolio Luis",
-        "description": "Mi portfolio personal con temática espacial"
+        "description": "Portfolio personal con temática espacial y enfoque frontend.",
+        "details": "Primera versión de mi portfolio personal, construida con React y Tailwind. Se centra en presentar perfil, habilidades y proyectos con una estética visual inmersiva, animaciones y navegación clara para mejorar la experiencia de quien visita la web."
       },
       "proyectoInformaticaGrafica": {
         "name": "Proyecto-Informatica-Grafica",
-        "description": "Proyecto sobre OpenGL y C++ para la asignatura de Informática Gráfica."
+        "description": "Proyecto académico de gráficos por ordenador en C++ y OpenGL.",
+        "details": "Trabajo universitario centrado en fundamentos de gráficos 3D con C++ y OpenGL. Incluye prácticas de renderizado, transformaciones y estructura de escena para consolidar conceptos de informática gráfica y programación de bajo nivel orientada a visualización."
+      },
+      "jPerformanceLaunch": {
+        "name": "j-performance-launch",
+        "description": "Web moderna para servicios de entrenamiento personalizado.",
+        "details": "Aplicación web en React + TypeScript + Tailwind para un entrenador personal. Incluye páginas de planes, contenido informativo, contacto y componentes reutilizables. Está documentada y preparada para despliegue en GitHub Pages con una arquitectura modular y mantenible."
       }
     }
   },

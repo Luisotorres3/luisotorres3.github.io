@@ -22,31 +22,43 @@
     "list": {
       "moneyScheduler": {
         "name": "MoneyScheduler",
-        "description": "Application mobile pour gérer vos revenus et dépenses"
+        "description": "Application mobile pour suivre revenus, dépenses et budget.",
+        "details": "Projet Android développé avec Kotlin et Firebase pour la gestion financière personnelle. Il permet d'enregistrer les mouvements, d'organiser les dépenses par catégories et d'améliorer la visibilité sur les habitudes de consommation."
       },
       "cartelera": {
         "name": "Cartelera",
-        "description": "Panneau d'affichage de cinéma en ligne avec informations dynamiques"
+        "description": "Application de films en ligne avec contenu dynamique.",
+        "details": "Application Android en Kotlin qui consomme une API REST pour afficher les films à l'affiche et leurs informations. Le projet met l'accent sur l'intégration de données externes et sur une navigation fluide entre les vues."
       },
       "panaderia": {
         "name": "Panaderia",
-        "description": "Application mobile pour gérer une boulangerie"
+        "description": "Application mobile pour la gestion quotidienne d'une boulangerie.",
+        "details": "Projet mobile en Kotlin conçu pour numériser des tâches de base d'une boulangerie, comme l'organisation des produits et le suivi opérationnel. L'objectif principal est la simplicité d'usage dans un contexte réel de petite entreprise."
       },
       "gonorte": {
         "name": "Gonorte",
-        "description": "Site web dynamique pour événements sportifs et gestion équine"
+        "description": "Site de coaching sportif axé sur la biomécanique et les plans en ligne.",
+        "details": "Site web réalisé avec React pour présenter des services de coaching, des plans, des témoignages et des canaux de contact. Il utilise une structure par routes et une approche visuelle orientée conversion, avec déploiement sur GitHub Pages."
       },
       "gestionDelOlivar": {
         "name": "Gestion de l'Oliveraie",
-        "description": "Projet de fin d'études sur la gestion agricole des oliveraies, Université de Grenade"
+        "description": "Projet de fin d'études pour la gestion et l'analyse des oliveraies.",
+        "details": "Application web développée comme projet de fin d'études à l'Université de Grenade. Elle permet de gérer des parcelles, consulter la météo, traiter des images pour compter les oliviers et visualiser des indicateurs utiles pour la prise de décision."
       },
       "portfolioLuis": {
         "name": "Portfolio Luis",
-        "description": "Mon portfolio personnel avec thème spatial"
+        "description": "Portfolio personnel avec identité visuelle spatiale.",
+        "details": "Première version de mon portfolio personnel, construite avec React et Tailwind. Elle présente mon profil, mes compétences et mes projets avec une interface immersive et une navigation claire pour les recruteurs et collaborateurs."
       },
       "proyectoInformaticaGrafica": {
         "name": "Proyecto-Informatica-Grafica",
-        "description": "Projet sur OpenGL et C++ pour le cours d'informatique graphique."
+        "description": "Projet académique de graphisme 3D en C++ et OpenGL.",
+        "details": "Travail universitaire centré sur les bases du rendu 3D avec C++ et OpenGL. Il couvre le rendu, les transformations et la composition de scènes pour consolider les concepts fondamentaux d'informatique graphique."
+      },
+      "jPerformanceLaunch": {
+        "name": "j-performance-launch",
+        "description": "Site web moderne pour des services de coaching personnalisé.",
+        "details": "Application web construite avec React, TypeScript et Tailwind pour une marque de coaching sportif. Elle inclut des pages de plans, des sections informatives, des flux de contact et des composants réutilisables, avec déploiement GitHub Pages."
       }
     }
   },

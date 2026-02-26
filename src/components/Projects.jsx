@@ -13,6 +13,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { FaExpandAlt } from "react-icons/fa";
+import { HiOutlineGlobeAlt } from "react-icons/hi";
 
 const techIcons = {
   Kotlin: <SiKotlin className="text-xl text-[#7F52FF]" />,
@@ -62,7 +63,12 @@ const Projects = () => {
             <h3 className="text-3xl font-bold text-accent mb-2">
               {t(selected.nameKey)}
             </h3>
-            <p className="text-muted mb-4">{t(selected.descriptionKey)}</p>
+            <p className="text-muted mb-2">{t(selected.descriptionKey)}</p>
+            <p className="text-sm md:text-base text-text/90 mb-4 leading-relaxed">
+              {selected.detailsKey
+                ? t(selected.detailsKey)
+                : t(selected.descriptionKey)}
+            </p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {selected.techs.map((tech, i) => (
@@ -75,26 +81,29 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* Vídeo demo */}
-            <div className="aspect-video w-full mb-6">
-              <iframe
-                src={selected.video}
-                title={`${t(selected.nameKey)} demo`}
-                allowFullScreen
-                className="w-full h-full rounded-md border border-white/10"
-                loading="lazy"
-              />
-            </div>
-
             <div className="flex justify-between">
-              <a
-                href={selected.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent text-xl hover:glow"
-              >
-                <SiGithub />
-              </a>
+              <div className="flex items-center gap-4">
+                <a
+                  href={selected.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent text-xl hover:glow"
+                  title="GitHub"
+                >
+                  <SiGithub />
+                </a>
+                {selected.website && (
+                  <a
+                    href={selected.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary text-xl hover:glow"
+                    title="Website"
+                  >
+                    <HiOutlineGlobeAlt />
+                  </a>
+                )}
+              </div>
               <button
                 onClick={handleBack}
                 className="text-sm text-muted underline hover:text-accent"
@@ -120,15 +129,30 @@ const Projects = () => {
                   <h3 className="text-accent text-base font-bold uppercase tracking-widest">
                     {t(proj.nameKey)}
                   </h3>
-                  <a
-                    href={proj.url}
-                    onClick={(e) => e.stopPropagation()}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:glow"
-                  >
-                    <SiGithub className="text-xl" />
-                  </a>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={proj.url}
+                      onClick={(e) => e.stopPropagation()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:glow"
+                      title="GitHub"
+                    >
+                      <SiGithub className="text-xl" />
+                    </a>
+                    {proj.website && (
+                      <a
+                        href={proj.website}
+                        onClick={(e) => e.stopPropagation()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:glow"
+                        title="Website"
+                      >
+                        <HiOutlineGlobeAlt className="text-xl" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <p className="text-xs mb-3">{t(proj.descriptionKey)}</p>

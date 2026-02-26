@@ -2,57 +2,68 @@
   {
     "nameKey": "projects.list.moneyScheduler.name",
     "descriptionKey": "projects.list.moneyScheduler.description",
+    "detailsKey": "projects.list.moneyScheduler.details",
     "url": "https://github.com/Luisotorres3/MoneyScheduler",
     "image": "/images/moneyscheduler.png",
-    "techs": ["Kotlin", "Firebase"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["Kotlin", "Firebase"]
   },
   {
     "nameKey": "projects.list.cartelera.name",
     "descriptionKey": "projects.list.cartelera.description",
+    "detailsKey": "projects.list.cartelera.details",
     "url": "https://github.com/Luisotorres3/Cartelera",
     "image": "/images/cartelera.png",
-    "techs": ["Kotlin", "API REST"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["Kotlin", "API REST"]
   },
   {
     "nameKey": "projects.list.panaderia.name",
     "descriptionKey": "projects.list.panaderia.description",
+    "detailsKey": "projects.list.panaderia.details",
     "url": "https://github.com/Luisotorres3/Panaderia",
     "image": "/images/panaderia.png",
-    "techs": ["Kotlin"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["Kotlin"]
   },
   {
     "nameKey": "projects.list.gonorte.name",
     "descriptionKey": "projects.list.gonorte.description",
+    "detailsKey": "projects.list.gonorte.details",
     "url": "https://github.com/Luisotorres3/Gonorte",
+    "website": "https://gonorte.com",
     "image": "/images/gonorte.png",
-    "techs": ["JavaScript", "Tailwind", "React"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["JavaScript", "Tailwind", "React"]
   },
   {
     "nameKey": "projects.list.gestionDelOlivar.name",
     "descriptionKey": "projects.list.gestionDelOlivar.description",
+    "detailsKey": "projects.list.gestionDelOlivar.details",
     "url": "https://github.com/Luisotorres3/Gestion-del-Olivar",
+    "website": "https://luisotorres3.github.io/Gestion-del-Olivar/",
     "image": "/images/olivar.png",
-    "techs": ["React", "Firebase", "JS"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["React", "Firebase", "JS"]
   },
   {
     "nameKey": "projects.list.portfolioLuis.name",
     "descriptionKey": "projects.list.portfolioLuis.description",
+    "detailsKey": "projects.list.portfolioLuis.details",
     "url": "https://github.com/Luisotorres3/portfolio_luis",
     "image": "/images/portfolio.png",
-    "techs": ["React", "Tailwind", "Framer Motion"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["React", "Tailwind", "Framer Motion"]
   },
   {
     "nameKey": "projects.list.proyectoInformaticaGrafica.name",
     "descriptionKey": "projects.list.proyectoInformaticaGrafica.description",
+    "detailsKey": "projects.list.proyectoInformaticaGrafica.details",
     "url": "https://github.com/Luisotorres3/Proyecto-Informatica-Grafica",
     "image": "/images/grafica.png",
-    "techs": ["C++", "OpenGL"],
-    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "techs": ["C++", "OpenGL"]
+  },
+  {
+    "nameKey": "projects.list.jPerformanceLaunch.name",
+    "descriptionKey": "projects.list.jPerformanceLaunch.description",
+    "detailsKey": "projects.list.jPerformanceLaunch.details",
+    "url": "https://github.com/Luisotorres3/j-performance-launch",
+    "website": "https://jperformancesystem.es",
+    "image": "/images/j-performance-launch.png",
+    "techs": ["React", "TypeScript", "Tailwind", "Framer Motion"]
   }
 ]
